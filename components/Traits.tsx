@@ -3,6 +3,12 @@
 import Image from "next/image";
 import { useEffect, useState } from "react";
 
+const DESIGN_SYSTEMS = [
+  { name: "Batt Design System",  href: "https://nishak.notion.site/Batt-Design-System-ea9b5da4c797405e9b7c9a790db4ce64" },
+  { name: "Cure Design System",  href: "https://nishak.notion.site/CURE-Design-System-741979c7285f4d3aba883fa5a1ea27ea" },
+  { name: "Aurum Design System", href: null },
+];
+
 const formulaSteps = ["5", "6", "7", "<5-7>", "3 * <5-7>"];
 const formulaDelays = [380, 380, 480, 620, 2800];
 
@@ -62,8 +68,59 @@ const darkGradientBtn: React.CSSProperties = {
   whiteSpace: "nowrap",
 };
 
-export default function Traits() {
+const gradientText: React.CSSProperties = {
+  fontSize: "24px",
+  lineHeight: "28px",
+  background: "linear-gradient(-7deg, #0D0F1A 1%, #4755E3 99%)",
+  WebkitBackgroundClip: "text",
+  WebkitTextFillColor: "transparent",
+  backgroundClip: "text",
+};
+
+function AurumModal({ onClose }: { onClose: () => void }) {
   return (
+    <div className="fixed inset-0 z-[900] flex items-center justify-center p-6"
+      style={{ background: "rgba(0,0,0,0.4)", backdropFilter: "blur(4px)" }}
+      onClick={onClose}>
+      <div className="flex flex-col gap-5 rounded-2xl p-8 max-w-[400px] w-full"
+        style={{ background: "white", boxShadow: "0 24px 80px rgba(0,0,0,0.2)" }}
+        onClick={(e) => e.stopPropagation()}>
+        <h2 className="font-display font-bold" style={{ fontSize: 18, color: "#0f172a" }}>Aurum Design System</h2>
+        <p className="font-body" style={{ fontSize: 15, lineHeight: "24px", color: "#475569" }}>
+          Aurum is not documented yet. You can check Batt and Cure till then — contact me for this.
+        </p>
+        <div className="flex gap-3">
+          <a href="https://nishak.notion.site/Batt-Design-System-ea9b5da4c797405e9b7c9a790db4ce64"
+            target="_blank" rel="noopener noreferrer"
+            className="font-body font-semibold flex-1 flex items-center justify-center hover:opacity-80"
+            style={{ padding: "10px 16px", borderRadius: 999, background: "#22C55E18", color: "#22C55E", border: "1.5px solid #22C55E40", fontSize: 13, textDecoration: "none" }}>
+            Batt DS
+          </a>
+          <a href="https://nishak.notion.site/CURE-Design-System-741979c7285f4d3aba883fa5a1ea27ea"
+            target="_blank" rel="noopener noreferrer"
+            className="font-body font-semibold flex-1 flex items-center justify-center hover:opacity-80"
+            style={{ padding: "10px 16px", borderRadius: 999, background: "#0EA5E918", color: "#0EA5E9", border: "1.5px solid #0EA5E940", fontSize: 13, textDecoration: "none" }}>
+            Cure DS
+          </a>
+          <a href="mailto:iamnishantupadhyay@gmail.com"
+            className="font-body font-semibold flex-1 flex items-center justify-center hover:opacity-80"
+            style={{ padding: "10px 16px", borderRadius: 999, background: "#4755E318", color: "#4755E3", border: "1.5px solid #4755E340", fontSize: 13, textDecoration: "none" }}>
+            Contact
+          </a>
+        </div>
+        <button onClick={onClose} className="font-body text-sm hover:opacity-60 transition-opacity" style={{ color: "#94a3b8", alignSelf: "center" }}>
+          Close
+        </button>
+      </div>
+    </div>
+  );
+}
+
+export default function Traits() {
+  const [aurumOpen, setAurumOpen] = useState(false);
+  return (
+    <>
+    {aurumOpen && <AurumModal onClose={() => setAurumOpen(false)} />}
     <section className="px-[60px] pt-[120px]">
 
       {/* Founder photo — outside the grid container */}
@@ -184,22 +241,21 @@ export default function Traits() {
                 Systems that outlive my tenure
               </p>
               <div className="flex flex-col items-end gap-2 mt-2">
-                {["Batt Design System", "Cure Design System", "Aurum Design System"].map((name) => (
-                  <span
-                    key={name}
-                    className="font-display font-medium underline underline-offset-2 cursor-pointer"
-                    style={{
-                      fontSize: "24px",
-                      lineHeight: "28px",
-                      background: "linear-gradient(-7deg, #0D0F1A 1%, #4755E3 99%)",
-                      WebkitBackgroundClip: "text",
-                      WebkitTextFillColor: "transparent",
-                      backgroundClip: "text",
-                    }}
-                  >
-                    {name}
-                  </span>
-                ))}
+                {DESIGN_SYSTEMS.map(({ name, href }) =>
+                  href ? (
+                    <a key={name} href={href} target="_blank" rel="noopener noreferrer"
+                      className="font-display font-medium underline underline-offset-2 hover:opacity-70 transition-opacity"
+                      style={gradientText}>
+                      {name}
+                    </a>
+                  ) : (
+                    <button key={name} onClick={() => setAurumOpen(true)}
+                      className="font-display font-medium underline underline-offset-2 hover:opacity-70 transition-opacity"
+                      style={gradientText}>
+                      {name}
+                    </button>
+                  )
+                )}
               </div>
             </div>
           </div>
@@ -286,5 +342,6 @@ export default function Traits() {
         </div>
       </div>
     </section>
+    </>
   );
 }

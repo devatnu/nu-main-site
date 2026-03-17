@@ -8,7 +8,7 @@ const playlist = [
   { title: "Track 3", src: "/music/portfolio_music_3.mp3" },
 ];
 
-const VOLUME = 0.3;
+const VOLUME = 1.0;
 
 export default function NavMusicPlayer() {
   const audioRef = useRef<HTMLAudioElement>(null);
@@ -24,10 +24,12 @@ export default function NavMusicPlayer() {
     audio.src = playlist[0].src;
 
     const tryPlay = () => {
+      audio.volume = VOLUME;
       audio.play().then(() => {
         setPlaying(true);
       }).catch(() => {
         const onInteract = () => {
+          audio.volume = VOLUME;
           audio.play().then(() => setPlaying(true)).catch(() => {});
           window.removeEventListener("click", onInteract);
           window.removeEventListener("wheel", onInteract);
@@ -143,7 +145,8 @@ export default function NavMusicPlayer() {
         </a>
       </div>
 
-      <audio ref={audioRef} />
+      {/* eslint-disable-next-line jsx-a11y/media-has-caption */}
+      <audio ref={audioRef} style={{ display: "none" }} />
     </>
   );
 }

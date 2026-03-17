@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { projects, getProject } from "@/lib/projects";
@@ -49,7 +50,14 @@ export default async function ProjectDetail({ params }: { params: Promise<{ slug
           </div>
           <h1
             className="font-display font-bold"
-            style={{ fontSize: "48px", lineHeight: "56px", color: "var(--text-primary)" }}
+            style={{
+              fontSize: "48px",
+              lineHeight: "56px",
+              background: "linear-gradient(135deg, #0f172a 0%, #475569 100%)",
+              WebkitBackgroundClip: "text",
+              WebkitTextFillColor: "transparent",
+              backgroundClip: "text",
+            }}
           >
             {project.title}
           </h1>
@@ -76,24 +84,19 @@ export default async function ProjectDetail({ params }: { params: Promise<{ slug
               </span>
             ))}
           </div>
+
         </div>
       </div>
 
-      {/* Hero visual placeholder */}
-      <div
-        className="w-full flex items-center justify-center"
-        style={{
-          height: "400px",
-          background: `linear-gradient(135deg, ${project.accent}12 0%, ${project.accent}28 100%)`,
-          borderBottom: "2px solid var(--global-border)",
-        }}
-      >
-        <span
-          className="font-display font-bold select-none"
-          style={{ fontSize: "160px", lineHeight: "1", color: project.accent, opacity: 0.15 }}
-        >
-          {String(idx + 1).padStart(2, "0")}
-        </span>
+      {/* Banner image */}
+      <div className="w-full relative" style={{ height: "512px", borderBottom: "2px solid var(--global-border)" }}>
+        <Image
+          src={`/problem_cards/banners/${project.bannerIndex}.png`}
+          alt={project.title}
+          fill
+          className="object-cover"
+          priority
+        />
       </div>
 
       {/* Body */}

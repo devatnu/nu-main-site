@@ -223,21 +223,20 @@ function TextBubble({ text }: { text: string }) {
 
 /* ─── Component: contacts ────────────────────────────────────────── */
 const CONTACT_CHIPS = [
-  { label: "Call him",  href: "tel:+917508631919",                           icon: <img src="/nav/phone.png"    alt="" width={24} height={24} style={{ objectFit: "contain" }} /> },
-  { label: "Whatsapp",  href: "https://wa.me/+917508631919",                 icon: <img src="/nav/whatsapp.png" alt="" width={24} height={24} style={{ objectFit: "contain" }} /> },
-  { label: "LinkedIn",  href: "https://www.linkedin.com/in/nishantupadhyay0/", icon: <img src="/nav/linkedIn.png" alt="" width={24} height={24} style={{ objectFit: "contain" }} /> },
+  { label: "Call him",  href: "tel:+917508631919",                             gradient: "linear-gradient(90deg, #275c9c, #00b8ec)" },
+  { label: "Whatsapp",  href: "https://wa.me/+917508631919",                   gradient: "linear-gradient(90deg, #009732, #00c850)" },
+  { label: "LinkedIn",  href: "https://www.linkedin.com/in/nishantupadhyay0/", gradient: "linear-gradient(90deg, #2a445e, #275c9c)" },
 ];
 
 function ContactsBubble({ text }: { text: string }) {
-  const t = useTheme();
   return (
     <>
       <Bubble><p style={{ margin: 0 }}>{text}</p></Bubble>
       {CONTACT_CHIPS.map((c) => (
         <a key={c.label} href={c.href} target="_blank" rel="noopener noreferrer"
-          className="font-body font-semibold flex items-center justify-center gap-4 shrink-0 transition-opacity hover:opacity-70"
-          style={{ background: t.chipBg, border: `1.6px solid ${t.chipBorder}`, color: t.chipText, borderRadius: 32, padding: "8px 16px", fontSize: 14, lineHeight: "18px", textDecoration: "none" }}>
-          {c.label}{c.icon}
+          className="font-body font-semibold flex items-center justify-center shrink-0 transition-opacity hover:opacity-80"
+          style={{ background: c.gradient, color: "white", borderRadius: 32, padding: "8px 16px", fontSize: 14, lineHeight: "18px", textDecoration: "none" }}>
+          {c.label}
         </a>
       ))}
     </>
@@ -373,6 +372,7 @@ export default function MyraChat() {
       setOpen(true);
       if (!voiceoverPlayed.current && voiceoverRef.current) {
         voiceoverRef.current.currentTime = 0;
+        voiceoverRef.current.volume = 1.0;
         voiceoverRef.current.play().catch(() => {});
         voiceoverPlayed.current = true;
       }

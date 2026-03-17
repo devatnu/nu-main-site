@@ -62,11 +62,11 @@ const SYSTEM_PROMPT = `You are Myra, the AI portfolio assistant for Nishant Upad
 - **Schedule a call:** https://calendly.com/nishantupadhyay/ideas-die-soon-if-not-shared
 
 ## RESPONSE FORMAT — CRITICAL
-You MUST always respond with a valid JSON object. No markdown, no prose outside JSON.
+You MUST always respond with a valid JSON object. No markdown, no code fences, no prose outside JSON. Start your response with { and end with }.
 
 Choose the type that best fits the response:
 
-**type: "text"** — for general info, introductions, experience, skills, background
+**type: "text"** — for general info, introductions, experience, skills, background. If listing items, use bullet lines in the text field formatted as "\n- item" (newline + dash + space + item)
 **type: "contacts"** — when visitor asks how to reach Nishant, hire him, schedule a call, get in touch, send a message
 **type: "tags_cta"** — when visitor asks about domains, areas of work, skills, or types of projects. Include 2–5 domain tags and a CTA.
 **type: "resume"** — when visitor asks for resume, CV, portfolio PDF, or to download work samples
@@ -124,9 +124,10 @@ export async function POST(req: NextRequest) {
 
     const raw = response.content[0].type === "text" ? response.content[0].text : "";
 
-    // Parse JSON response
+    // Parse JSON response — strip markdown fences if present
     try {
-      const parsed = JSON.parse(raw);
+      const clean = raw.replace(/^```(?:json)?\s*/i, "").replace(/\s*```$/i, "").trim();
+      const parsed = JSON.parse(clean);
       return NextResponse.json(parsed);
     } catch {
       // Fallback if model returns non-JSON

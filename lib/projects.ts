@@ -8,6 +8,7 @@ export interface Project {
   previewRadius: string;
   brand: string;
   accent: string;
+  bannerIndex: number;
   context: string;
   problem: string;
   approach: { heading: string; body: string }[];
@@ -18,6 +19,7 @@ export interface Project {
 export const projects: Project[] = [
   {
     slug: "kuber",
+    bannerIndex: 1,
     title: "Kuber — AI-Enabled Wealth Experience",
     tag: "Wealth · Fintech · Concept to Launch",
     description:
@@ -56,6 +58,7 @@ export const projects: Project[] = [
   },
   {
     slug: "enabling-mf-underserved-india",
+    bannerIndex: 2,
     title: "Enabling Mutual Funds for Underserved India",
     tag: "Instant FD · Fintech · Daily Savings Platform",
     description:
@@ -94,6 +97,7 @@ export const projects: Project[] = [
   },
   {
     slug: "milestones-rewards",
+    bannerIndex: 4,
     title: "Milestones & Rewards — Informed customer retention",
     tag: "Bachatt · Retention · Behavioural Retention",
     description:
@@ -132,6 +136,7 @@ export const projects: Project[] = [
   },
   {
     slug: "gold-and-silver",
+    bannerIndex: 3,
     title: "Gold & Silver — Precious Metals Investing",
     tag: "Metal · Fintech · New Product Line",
     description:
@@ -170,6 +175,7 @@ export const projects: Project[] = [
   },
   {
     slug: "loans-underserved-india",
+    bannerIndex: 6,
     title: "Insta Loans - for Underserved\nIndia",
     tag: "Loans · Fintech · Lending Product",
     description:
@@ -208,6 +214,7 @@ export const projects: Project[] = [
   },
   {
     slug: "festive-one-time-investments",
+    bannerIndex: 7,
     title: "Supercharge inflows with one-Time Investments",
     tag: "Bachatt · Revenue · Behavioural Design",
     description:
@@ -246,6 +253,7 @@ export const projects: Project[] = [
   },
   {
     slug: "merchant-delivery",
+    bannerIndex: 5,
     title: "Merchant Delivery - E-Rickshaw Logistics",
     tag: "BatterSmart · Merchant · MVP Launch",
     description:
@@ -288,6 +296,7 @@ export const projects: Project[] = [
   },
   {
     slug: "banking-medical-practitioners",
+    bannerIndex: 8,
     title: "Banking\nfor Medical Practitioners",
     tag: "Cure · Healthtech x Fintech · Berlin",
     description:
@@ -330,6 +339,7 @@ export const projects: Project[] = [
   },
   {
     slug: "goal-based-investing",
+    bannerIndex: 9,
     title: "Goal-Based Investing",
     tag: "Bachatt · Fintech · Behavioural Architecture",
     description:
@@ -372,6 +382,7 @@ export const projects: Project[] = [
   },
   {
     slug: "jio-offer-store-revamp",
+    bannerIndex: 10,
     title: "Jio Offer Store Revamp",
     tag: "Jio Engage · Jio Platforms · Design System Migration",
     description:
