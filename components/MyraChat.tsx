@@ -518,7 +518,7 @@ export default function MyraChat() {
                 <p className="font-body text-center" style={{ color: t.nameColor, fontSize: 16, lineHeight: "20px" }}>Hey there!</p>
                 <div className="flex flex-col gap-2 items-center py-2 w-full">
                   <p className="font-display font-medium text-center whitespace-nowrap"
-                    style={{ fontSize: 24, lineHeight: "28px", background: t.dark ? "linear-gradient(155.92deg, #ffffff 14.94%, #a78bfa 86.46%)" : "linear-gradient(155.92deg, #000000 14.94%, #a78bfa 86.46%)", WebkitBackgroundClip: "text", WebkitTextFillColor: "transparent", backgroundClip: "text" }}>
+                    style={{ fontSize: 24, lineHeight: "28px", background: "linear-gradient(155.92deg, #000000 14.94%, #a78bfa 86.46%)", WebkitBackgroundClip: "text", WebkitTextFillColor: "transparent", backgroundClip: "text" }}>
                     Hi, I am Myra
                   </p>
                   <p className="font-body text-center" style={{ color: t.nameColor, fontSize: 16, lineHeight: "20px" }}>
