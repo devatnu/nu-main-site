@@ -29,7 +29,7 @@ export default function ToolsStrip() {
       <div className="flex items-center gap-3 px-10 mb-8">
         <div className="flex-1 h-px" style={{ background: "linear-gradient(to right, transparent, #1E2029)" }} />
         <span
-          className="font-body.heading-m text-xs tracking-widest uppercase whitespace-nowrap"
+          className="label-s tracking-widest uppercase whitespace-nowrap"
           style={{ color: "var(--text-primary)" }}
         >
           <Image src="/icons/star.png" alt="" width={16} height={16} className="inline-block mr-2" />

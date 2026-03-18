@@ -124,19 +124,6 @@ export default function Hero() {
             Ask Myra
           </button>
         </div>
-
-        {/* Handwritten annotation */}
-        {/* <div className="relative self-start ml-4 flex items-center gap-1">
-          <span
-            style={{
-              fontFamily: "'Caveat', cursive",
-              color: "#FF7300",
-              fontSize: "20px",
-            }}
-          >
-            Schedule a free call now
-          </span>
-        </div> */}
       </div>
 
       {/* Trust row */}

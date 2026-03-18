@@ -46,36 +46,37 @@ body {
   -webkit-font-smoothing: antialiased;
 }
 
-/* Font families */
-.font-display  { font-family: var(--font-display), "Bricolage Grotesque", sans-serif; }
-.font-inter    { font-family: var(--font-inter), Inter, sans-serif; }
-.font-body     { font-family: var(--font-body), "Be Vietnam Pro", sans-serif; }
+@layer utilities {
+  /* Font families */
+  .font-display  { font-family: var(--font-display); }
+  .font-body     { font-family: var(--font-body); }
 
-/* Display — Bricolage Grotesque */
-.display-2xl { font-family: var(--font-display), sans-serif; font-size: 64px; line-height: 72px; font-weight: 700; }
-.display-xl  { font-family: var(--font-display), sans-serif; font-size: 48px; line-height: 56px; font-weight: 700; }
-.display-l   { font-family: var(--font-display), sans-serif; font-size: 32px; line-height: 36px; font-weight: 600; }
-.display-m   { font-family: var(--font-display), sans-serif; font-size: 20px; line-height: 24px; font-weight: 400; }
-.display-s   { font-family: var(--font-display), sans-serif; font-size: 16px; line-height: 20px; font-weight: 400; }
+  /* Display — Bricolage Grotesque */
+  .display-2xl { font-family: var(--font-display); font-size: 64px; line-height: 72px; font-weight: 700; }
+  .display-xl  { font-family: var(--font-display); font-size: 48px; line-height: 56px; font-weight: 700; }
+  .display-l   { font-family: var(--font-display); font-size: 32px; line-height: 36px; font-weight: 600; }
+  .display-m   { font-family: var(--font-display); font-size: 20px; line-height: 24px; font-weight: 400; }
+  .display-s   { font-family: var(--font-display); font-size: 16px; line-height: 20px; font-weight: 400; }
 
-/* Heading — Be Vietnam Pro */
-.heading-xl  { font-family: var(--font-body), sans-serif; font-size: 24px; line-height: 28px; font-weight: 700; }
-.heading-l   { font-family: var(--font-body), sans-serif; font-size: 20px; line-height: 24px; font-weight: 600; }
-.heading-m   { font-family: var(--font-body), sans-serif; font-size: 16px; line-height: 20px; font-weight: 600; }
-.heading-s   { font-family: var(--font-body), sans-serif; font-size: 14px; line-height: 18px; font-weight: 500; }
+  /* Heading — Be Vietnam Pro */
+  .heading-xl  { font-family: var(--font-body); font-size: 24px; line-height: 28px; font-weight: 700; }
+  .heading-l   { font-family: var(--font-body); font-size: 20px; line-height: 24px; font-weight: 600; }
+  .heading-m   { font-family: var(--font-body); font-size: 16px; line-height: 20px; font-weight: 600; }
+  .heading-s   { font-family: var(--font-body); font-size: 14px; line-height: 18px; font-weight: 500; }
 
-/* Body — Be Vietnam Pro */
-.body-l      { font-family: var(--font-body), sans-serif; font-size: 16px; line-height: 20px; font-weight: 400; }
-.body-m      { font-family: var(--font-body), sans-serif; font-size: 14px; line-height: 18px; font-weight: 400; }
-.body-s      { font-family: var(--font-body), sans-serif; font-size: 12px; line-height: 16px; font-weight: 400; }
+  /* Body — Be Vietnam Pro */
+  .body-l      { font-family: var(--font-body); font-size: 16px; line-height: 20px; font-weight: 400; }
+  .body-m      { font-family: var(--font-body); font-size: 14px; line-height: 18px; font-weight: 400; }
+  .body-s      { font-family: var(--font-body); font-size: 12px; line-height: 16px; font-weight: 400; }
 
-/* Label — Be Vietnam Pro SemiBold */
-.label-m     { font-family: var(--font-body), sans-serif; font-size: 14px; line-height: 18px; font-weight: 600; }
-.label-s     { font-family: var(--font-body), sans-serif; font-size: 12px; line-height: 16px; font-weight: 600; }
+  /* Label — Be Vietnam Pro SemiBold */
+  .label-m     { font-family: var(--font-body); font-size: 14px; line-height: 18px; font-weight: 600; }
+  .label-s     { font-family: var(--font-body); font-size: 12px; line-height: 16px; font-weight: 600; }
 
-/* Helper — Be Vietnam Pro */
-.helper-m    { font-family: var(--font-body), sans-serif; font-size: 12px; line-height: 16px; font-weight: 300; font-style: italic; }
-.helper-s    { font-family: var(--font-body), sans-serif; font-size: 10px; line-height: 14px; font-weight: 400; }
+  /* Helper — Be Vietnam Pro */
+  .helper-m    { font-family: var(--font-body); font-size: 12px; line-height: 16px; font-weight: 300; font-style: italic; }
+  .helper-s    { font-family: var(--font-body); font-size: 10px; line-height: 14px; font-weight: 400; }
+}
 
 .gradient-hero-text {
   background: var(--gradient-text);

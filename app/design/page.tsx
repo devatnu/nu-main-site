@@ -127,7 +127,7 @@ function WideCard({
 
         {/* View more button */}
         <span
-          className="shrink-0 flex items-center justify-center body-l font-semibold text-white transition-opacity duration-150 group-hover:opacity-90"
+          className="shrink-0 flex items-center justify-center heading-m text-white transition-opacity duration-150 group-hover:opacity-90"
           style={{
             height: "56px",
             padding: "16px 48px",
@@ -202,7 +202,7 @@ function CompactCard({
           {project.description}
         </p>
         <span
-          className="shrink-0 flex items-center justify-center body-l font-semibold text-white transition-opacity duration-150 group-hover:opacity-80"
+          className="shrink-0 flex items-center justify-center heading-m text-white transition-opacity duration-150 group-hover:opacity-80"
           style={{
             height: "56px",
             padding: "16px 48px",
@@ -344,7 +344,7 @@ function StackedWideCard({
           </div>
         ))}
         <span
-          className="shrink-0 flex items-center justify-center body-l font-semibold text-white transition-opacity duration-150 group-hover:opacity-90"
+          className="shrink-0 flex items-center justify-center heading-m text-white transition-opacity duration-150 group-hover:opacity-90"
           style={{
             height: "56px",
             padding: "16px 48px",
