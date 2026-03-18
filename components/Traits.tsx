@@ -36,7 +36,7 @@ function AnimatedFormula() {
   }, [step]);
 
   return (
-    <p className="absolute font-display font-bold whitespace-nowrap text-center" style={formulaStyle}>
+    <p className="absolute display-xl whitespace-nowrap text-center" style={formulaStyle}>
       <span key={step} className="step-content-enter inline-block">
         {formulaSteps[step]}
       </span>

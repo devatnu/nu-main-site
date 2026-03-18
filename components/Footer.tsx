@@ -41,7 +41,7 @@ export default function Footer() {
 
         {/* Headline + subheadline */}
         <div className="flex flex-col items-center gap-4 relative z-10 text-center text-white">
-          <p className="font-display font-bold" style={{ fontSize: "64px", lineHeight: "72px" }}>
+          <p className="display-xl" style={{ fontSize: "64px", lineHeight: "72px" }}>
             You&apos;ve seen what I do.
           </p>
           <p className="display-l">
@@ -130,7 +130,7 @@ export default function Footer() {
       {/* Bottom text — outside the card */}
       <div className="flex flex-col items-center gap-4">
         <p
-          className="font-display font-bold text-center whitespace-nowrap"
+          className="display-xl text-center whitespace-nowrap"
           style={{ fontSize: "64px", lineHeight: "72px", color: "#8E8F94" }}
         >
           Made with passion ❤️,<br />Guided by vision 🥽

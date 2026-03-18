@@ -66,7 +66,7 @@ export default function MyraTeaser() {
                 Have you met
               </p>
               <p
-                className="font-display font-bold"
+                className="display-xl"
                 style={{
                   fontSize: "64px", lineHeight: "72px",
                   background: "linear-gradient(140.51deg, #ffffff 14.94%, #a78bfa 86.46%)",

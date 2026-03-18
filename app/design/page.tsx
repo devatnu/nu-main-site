@@ -86,7 +86,7 @@ function WideCard({
             )}
           </p>
           <h2
-            className="font-display font-bold"
+            className="display-xl"
             style={{ fontSize: "64px", lineHeight: "72px", color: "var(--text-primary)" }}
           >
             {project.title}
@@ -293,7 +293,7 @@ function StackedWideCard({
           )}
         </p>
         <h2
-          className="font-display font-bold text-center"
+          className="display-xl text-center"
           style={{ fontSize: "64px", lineHeight: "72px", color: "var(--text-primary)" }}
         >
           {project.title}
@@ -373,7 +373,7 @@ export default function DesignPage() {
         style={{ animationDelay: "0ms", paddingLeft: "128px", paddingRight: "128px" }}
       >
         <h1
-          className="font-display font-bold"
+          className="display-xl"
           style={{
             fontSize: "64px",
             lineHeight: "72px",

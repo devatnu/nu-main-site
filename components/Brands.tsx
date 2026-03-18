@@ -155,7 +155,7 @@ export default function Brands() {
           <Image src="/icons/chevron-left.svg" alt="" width={16} height={16} />
         </div>
         <h2
-          className="font-display font-bold text-center"
+          className="display-xl text-center"
           style={{
             fontSize: "64px",
             lineHeight: "1.05",

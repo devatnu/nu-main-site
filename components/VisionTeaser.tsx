@@ -63,7 +63,7 @@ export default function VisionTeaser() {
 
         <div className="flex flex-col items-center gap-2">
           <h2
-            className="font-display font-bold text-center"
+            className="display-xl text-center"
             style={{
               fontSize: "64px", lineHeight: "72px",
               background: "linear-gradient(-6deg, #0D0F1A 1%, #4755E3 99%)",

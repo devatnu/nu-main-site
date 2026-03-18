@@ -67,12 +67,12 @@ export default function QuoteTeaser() {
 
       {/* Quote */}
       <div className="text-center w-full">
-        <p className="font-display font-bold" style={{ fontSize: "64px", lineHeight: "72px", color: "black" }}>
+        <p className="display-xl" style={{ fontSize: "64px", lineHeight: "72px", color: "black" }}>
           &ldquo;{displayedQuote}
           {quoteTyping && <span className="cursor-blink inline-block w-[4px] h-[56px] bg-black ml-1 align-middle" />}
           {!quoteTyping && displayedQuote.length > 0 && <>&rdquo;</>}
         </p>
-        <p className="font-display font-bold" style={{ fontSize: "64px", lineHeight: "72px", color: "black", minHeight: "72px" }}>
+        <p className="display-xl" style={{ fontSize: "64px", lineHeight: "72px", color: "black", minHeight: "72px" }}>
           {displayedSub}
           {subTyping && <span className="cursor-blink inline-block w-[4px] h-[56px] bg-black ml-1 align-middle" />}
         </p>

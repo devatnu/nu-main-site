@@ -72,7 +72,7 @@ function TypewriterNumber({ value, delay = 0 }: { value: string; delay?: number 
   return (
     <span
       ref={ref}
-      className="absolute top-14 left-14 font-display font-bold select-none pointer-events-none"
+      className="absolute top-14 left-14 display-xl select-none pointer-events-none"
       style={numberStyle}
     >
       {displayed}
@@ -104,7 +104,7 @@ export default function ImpactNumbers() {
 
           {/* Heading */}
           <h2
-            className="font-display font-bold"
+            className="display-xl"
             style={{
               fontSize: "64px",
               lineHeight: "1.05",
