@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 import { projects, Project } from "@/lib/projects";
 
@@ -57,14 +58,15 @@ function WideCard({
       >
         {/* Preview image */}
         <div
-          className="shrink-0 overflow-hidden"
+          className="relative shrink-0 overflow-hidden"
           style={{ width: "440px", aspectRatio: "1 / 1", borderRadius: project.previewRadius }}
         >
-          {/* eslint-disable-next-line @next/next/no-img-element */}
-          <img
+          <Image
             src={project.previewImage}
             alt=""
-            style={{ width: "100%", height: "100%", objectFit: "cover", display: "block" }}
+            fill
+            className="object-cover"
+            sizes="440px"
           />
         </div>
 
@@ -228,14 +230,15 @@ function CompactCard({
 
       {/* Preview image */}
       <div
-        className="overflow-hidden w-full"
-        style={{ borderRadius: project.previewRadius }}
+        className="relative overflow-hidden w-full"
+        style={{ borderRadius: project.previewRadius, aspectRatio: "16 / 9" }}
       >
-        {/* eslint-disable-next-line @next/next/no-img-element */}
-        <img
+        <Image
           src={project.previewImage}
           alt=""
-          style={{ width: "100%", height: "auto", display: "block" }}
+          fill
+          className="object-cover"
+          sizes="(max-width: 768px) 100vw, 800px"
         />
       </div>
     </Link>
@@ -274,8 +277,7 @@ function StackedWideCard({
         className="pointer-events-none select-none absolute"
         style={{ right: "-60px", top: "-80px", width: "280px", height: "280px", transform: "rotate(22.85deg)" }}
       >
-        {/* eslint-disable-next-line @next/next/no-img-element */}
-        <img src="/problem_cards/preview/coin_top_right.png" alt="" style={{ width: "100%", height: "100%", objectFit: "contain" }} />
+        <Image src="/problem_cards/preview/coin_top_right.png" alt="" fill className="object-contain" sizes="280px" />
       </div>
 
       {/* Coin — left center */}
@@ -283,8 +285,7 @@ function StackedWideCard({
         className="pointer-events-none select-none absolute"
         style={{ left: "-80px", top: "160px", width: "200px", height: "200px", transform: "rotate(-23.99deg)" }}
       >
-        {/* eslint-disable-next-line @next/next/no-img-element */}
-        <img src="/problem_cards/preview/coin_second.png" alt="" style={{ width: "100%", height: "100%", objectFit: "contain" }} />
+        <Image src="/problem_cards/preview/coin_second.png" alt="" fill className="object-contain" sizes="200px" />
       </div>
 
       {/* Text — centered */}

@@ -96,6 +96,7 @@ export default async function ProjectDetail({ params }: { params: Promise<{ slug
           fill
           className="object-cover"
           priority
+          sizes="(max-width: 768px) 100vw, (max-width: 1200px) 100vw, 1440px"
         />
       </div>
 

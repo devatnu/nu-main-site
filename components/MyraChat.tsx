@@ -371,9 +371,12 @@ export default function MyraChat() {
     const handler = () => {
       setOpen(true);
       if (!voiceoverPlayed.current && voiceoverRef.current) {
-        voiceoverRef.current.currentTime = 0;
-        voiceoverRef.current.volume = 1.0;
-        voiceoverRef.current.play().catch(() => {});
+        const vo = voiceoverRef.current;
+        vo.currentTime = 0;
+        vo.volume = 1.0;
+        window.dispatchEvent(new CustomEvent("myra-voice-start"));
+        vo.play().catch(() => {});
+        vo.onended = () => window.dispatchEvent(new CustomEvent("myra-voice-end"));
         voiceoverPlayed.current = true;
       }
       setTimeout(() => inputRef.current?.focus(), 350);

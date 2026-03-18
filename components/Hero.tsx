@@ -124,7 +124,7 @@ export default function Hero() {
             }}
           >
             <div className="relative w-9 h-9 rounded-full shrink-0" style={{ boxShadow: "0 0 12px rgba(71,85,227,0.6)" }}>
-              <Image src="/section-myra/myra_static.png" alt="Myra" fill className="object-cover rounded-full" />
+              <Image src="/section-myra/myra_static.png" alt="Myra" fill className="object-cover rounded-full" priority />
             </div>
             Ask Myra
           </button>
@@ -146,7 +146,7 @@ export default function Hero() {
 
       {/* Trust row */}
       <div className="relative z-10 flex items-center gap-4">
-        <Image src="/icons/trust-avatars.png" alt="Users" height={32} width={96} className="object-contain" />
+        <Image src="/icons/trust-avatars.png" alt="Users" height={32} width={96} className="object-contain" priority />
         <p className="font-body text-sm">
           <span className="italic" style={{ color: "var(--text-primary)" }}>Designed for </span>
           <span className="font-bold" style={{ color: "#4755E3" }}>120M+</span>

@@ -18,21 +18,23 @@ export default function Footer() {
         }}
       >
         {/* Vector decoration — top right */}
-        {/* eslint-disable-next-line @next/next/no-img-element */}
-        <img
+        <Image
           src="/section-footer/Vector.png"
           alt=""
+          width={400}
+          height={400}
           className="absolute top-0 right-0 pointer-events-none select-none"
-          style={{ width: "400px", zIndex: 0 }}
+          style={{ width: "400px", height: "auto", zIndex: 0 }}
         />
 
         {/* Founder photo + divider */}
         <div className="flex flex-col items-center relative z-10 shrink-0">
-          {/* eslint-disable-next-line @next/next/no-img-element */}
-          <img
+          <Image
             src="/section-footer/founder-footer.png"
             alt="Nishant Upadhyay"
-            style={{ width: "363px", height: "272px", objectFit: "cover", display: "block" }}
+            width={363}
+            height={272}
+            style={{ objectFit: "cover", display: "block" }}
           />
           <div style={{ width: "512px", height: "1px", background: "rgba(255,255,255,0.2)", marginTop: "0" }} />
         </div>

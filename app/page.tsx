@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Hero from "@/components/Hero";
 import ToolsStrip from "@/components/ToolsStrip";
 import Traits from "@/components/Traits";
@@ -16,13 +17,11 @@ export default function Home() {
       {/* Background graphics — fixed, behind everything, not clipped vertically */}
       <div className="absolute pointer-events-none select-none z-0"
         style={{ left: "-876px", top: "-180px", width: "1152px", height: "1152px" }}>
-        {/* eslint-disable-next-line @next/next/no-img-element */}
-        <img src="/hero/Graphic Top Left.png" alt="" style={{ width: "100%", height: "100%", objectFit: "contain" }} />
+        <Image src="/hero/Graphic Top Left.png" alt="" fill className="object-contain" priority />
       </div>
       <div className="absolute pointer-events-none select-none z-0"
         style={{ right: "-876px", top: "-180px", width: "1152px", height: "1152px" }}>
-        {/* eslint-disable-next-line @next/next/no-img-element */}
-        <img src="/hero/Graphic Top Right.png" alt="" style={{ width: "100%", height: "100%", objectFit: "contain" }} />
+        <Image src="/hero/Graphic Top Right.png" alt="" fill className="object-contain" priority />
       </div>
       <Hero />
       <ToolsStrip />

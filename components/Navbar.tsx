@@ -160,8 +160,7 @@ export default function Navbar() {
       <div className="flex flex-1 items-start h-12 gap-8">
         {/* Logo */}
         <Link href="/" className="relative shrink-0 size-12 transition-opacity duration-150 hover:opacity-80">
-          {/* eslint-disable-next-line @next/next/no-img-element */}
-          <img src="/nav/logo.png" alt="Logo" style={{ width: "48px", height: "48px", display: "block", objectFit: "contain" }} />
+          <Image src="/nav/logo.png" alt="Logo" width={48} height={48} priority style={{ display: "block", objectFit: "contain" }} />
         </Link>
         <div
           className="flex h-12 items-center gap-[2px] rounded-xl overflow-hidden shrink-0"
@@ -271,17 +270,14 @@ export default function Navbar() {
       <div className="flex flex-1 items-start justify-end gap-8">
         {/* Quick links */}
         <div className="flex items-center gap-4 shrink-0">
-          {/* eslint-disable-next-line @next/next/no-img-element */}
           <a href="https://wa.me/+917508631919" target="_blank" rel="noopener noreferrer" className="shrink-0 transition-opacity duration-150 hover:opacity-80">
-            <img src="/nav/whatsapp.png" alt="WhatsApp" width={48} height={48} style={{ display: "block" }} />
+            <Image src="/nav/whatsapp.png" alt="WhatsApp" width={48} height={48} style={{ display: "block" }} />
           </a>
-          {/* eslint-disable-next-line @next/next/no-img-element */}
           <button onClick={() => navigator.clipboard.writeText("+917508631919")} className="shrink-0 transition-opacity duration-150 hover:opacity-80" title="Copy phone number" style={{ padding: 0, background: "none", border: "none" }}>
-            <img src="/nav/phone.png" alt="Phone" width={48} height={48} style={{ display: "block" }} />
+            <Image src="/nav/phone.png" alt="Phone" width={48} height={48} style={{ display: "block" }} />
           </button>
-          {/* eslint-disable-next-line @next/next/no-img-element */}
           <a href="https://www.linkedin.com/in/nishantupadhyay0/" target="_blank" rel="noopener noreferrer" className="shrink-0 transition-opacity duration-150 hover:opacity-80">
-            <img src="/nav/linkedIn.png" alt="LinkedIn" width={48} height={48} style={{ display: "block" }} />
+            <Image src="/nav/linkedIn.png" alt="LinkedIn" width={48} height={48} style={{ display: "block" }} />
           </a>
         </div>
 

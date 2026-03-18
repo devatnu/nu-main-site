@@ -58,8 +58,8 @@ export default function ToolsStrip() {
                   src={tool.src}
                   alt={tool.name}
                   fill
-                  unoptimized
                   className="object-contain"
+                  sizes="240px"
                 />
             </div>
           ))}

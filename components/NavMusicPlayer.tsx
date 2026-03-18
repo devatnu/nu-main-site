@@ -16,6 +16,27 @@ export default function NavMusicPlayer() {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [hovered, setHovered] = useState(false);
 
+  // Pause music when Myra voiceover plays, resume when it ends
+  useEffect(() => {
+    const onVoiceStart = () => {
+      if (audioRef.current && !audioRef.current.paused) {
+        audioRef.current.pause();
+        setPlaying(false);
+      }
+    };
+    const onVoiceEnd = () => {
+      if (audioRef.current) {
+        audioRef.current.play().then(() => setPlaying(true)).catch(() => {});
+      }
+    };
+    window.addEventListener("myra-voice-start", onVoiceStart);
+    window.addEventListener("myra-voice-end", onVoiceEnd);
+    return () => {
+      window.removeEventListener("myra-voice-start", onVoiceStart);
+      window.removeEventListener("myra-voice-end", onVoiceEnd);
+    };
+  }, []);
+
   // Autoplay on mount — try immediately, fall back to first user interaction
   useEffect(() => {
     const audio = audioRef.current;
