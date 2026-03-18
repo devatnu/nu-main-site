@@ -103,8 +103,8 @@ export default function Navbar() {
           {/* Left: text + CTA */}
           <div className="flex flex-col gap-3 flex-1 self-stretch justify-between pr-4 pb-10">
             <p
-              className="font-body italic text-white"
-              style={{ fontSize: "12px", lineHeight: "16px", fontWeight: 300, opacity: 0.7 }}
+              className="helper-m text-white"
+              style={{ opacity: 0.7 }}
             >
               Hello there!
             </p>
@@ -116,18 +116,17 @@ export default function Navbar() {
                 I am always creating stuff with AI
               </h2>
               <p
-                className="font-body text-white"
-                style={{ fontSize: "16px", lineHeight: "20px", opacity: 0.85 }}
+                className="body-l text-white"
+                style={{ opacity: 0.85 }}
               >
                 Keep an eye out 👀
               </p>
             </div>
             <button
               onClick={handleModalCTA}
-              className="font-body font-semibold text-white rounded-xl transition-opacity duration-150 hover:opacity-80"
+              className="label-m text-white rounded-xl transition-opacity duration-150 hover:opacity-80"
               style={{
                 background: "#4755E3",
-                fontSize: "14px",
                 height: "48px",
                 width: "240px",
                 boxShadow: "0px 0px 40px rgba(71,85,227,0.4)",
@@ -185,7 +184,7 @@ export default function Navbar() {
         {/* Ask Myra — appears when hero scrolls out */}
         <button
           onClick={() => window.dispatchEvent(new CustomEvent("open-myra"))}
-          className="flex items-center gap-2 font-body font-semibold italic text-white rounded-xl border shimmer-ai-btn shrink-0 transition-all duration-300"
+          className="flex items-center gap-2 label-m italic text-white rounded-xl border shimmer-ai-btn shrink-0 transition-all duration-300"
           style={{
             background: "linear-gradient(-17deg, #1E2029 1%, #0A0C17 99%)",
             borderColor: "rgba(255,255,255,0.3)",

@@ -143,7 +143,7 @@ export default function Brands() {
       {/* Header */}
       <div className="flex flex-col items-center gap-6 px-10 mb-12">
         <div
-          className="inline-flex items-center gap-1 px-3 py-1.5 rounded-lg border font-body text-xs"
+          className="inline-flex items-center gap-1 px-3 py-1.5 rounded-lg border label-s"
           style={{
             background: "var(--base-200)",
             borderColor: "var(--global-border)",
@@ -208,13 +208,13 @@ export default function Brands() {
               >
                 {/* Top section */}
                 <div className="relative p-4 flex flex-col gap-2">
-                  <h3 className="font-body font-bold" style={{ fontSize: "24px", color: "var(--text-primary)" }}>
+                  <h3 className="heading-xl" style={{ color: "var(--text-primary)" }}>
                     {brand.name}
                   </h3>
-                  <p className="font-body italic" style={{ fontSize: "14px", color: "var(--text-primary)" }}>
+                  <p className="body-m italic" style={{ color: "var(--text-primary)" }}>
                     {brand.category}
                   </p>
-                  <p className="font-body" style={{ fontSize: "14px", color: "#6C6A6A", paddingTop: "24px" }}>
+                  <p className="body-m" style={{ color: "#6C6A6A", paddingTop: "24px" }}>
                     {brand.description}
                   </p>
                   <div className="absolute top-4 right-4" style={{ width: "80px", height: "40px" }}>
@@ -229,7 +229,7 @@ export default function Brands() {
                       <span className="font-display font-bold" style={{ fontSize: "32px", color: brand.statColor, lineHeight: "1" }}>
                         {stat.number}
                       </span>
-                      <span className="font-body italic" style={{ fontSize: "12px", color: "var(--text-secondary)" }}>
+                      <span className="helper-m" style={{ color: "var(--text-secondary)" }}>
                         {stat.label}
                       </span>
                     </div>

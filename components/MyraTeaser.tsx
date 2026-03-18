@@ -51,15 +51,14 @@ export default function MyraTeaser() {
           <div className="relative flex flex-col gap-14 flex-1" style={{ zIndex: 3 }}>
             <div className="flex flex-col gap-4">
               <p
-                className="font-body italic"
-                style={{ fontSize: "12px", lineHeight: "16px", fontWeight: 300, color: "white" }}
+                className="helper-m"
+                style={{ color: "white" }}
               >
                 Ooh and ...
               </p>
               <p
-                className="font-display font-semibold"
+                className="display-l"
                 style={{
-                  fontSize: "32px", lineHeight: "36px",
                   background: "linear-gradient(158.19deg, #ffffff 14.94%, #a78bfa 86.46%)",
                   WebkitBackgroundClip: "text", WebkitTextFillColor: "transparent", backgroundClip: "text",
                 }}
@@ -78,7 +77,7 @@ export default function MyraTeaser() {
               </p>
             </div>
 
-            <p className="font-body" style={{ fontSize: "14px", lineHeight: "18px", color: "white" }}>
+            <p className="body-m" style={{ color: "white" }}>
               My companion throughout career journey : )
             </p>
           </div>
@@ -109,7 +108,7 @@ export default function MyraTeaser() {
               {["Ask anything about me", "Submit your ideas"].map((item) => (
                 <div key={item} className="flex items-center gap-2">
                   <Image src="/icons/star.png" alt="" width={16} height={16} />
-                  <p className="font-body" style={{ fontSize: "14px", lineHeight: "18px", color: "var(--text-primary)" }}>
+                  <p className="body-m" style={{ color: "var(--text-primary)" }}>
                     {item}
                   </p>
                 </div>
@@ -119,14 +118,13 @@ export default function MyraTeaser() {
             {/* CTA button */}
             <button
               onClick={() => window.dispatchEvent(new CustomEvent("open-myra"))}
-              className="font-body font-semibold italic text-white flex items-center justify-center rounded-xl shimmer-ai-btn"
+              className="label-m italic text-white flex items-center justify-center rounded-xl shimmer-ai-btn"
               style={{
                 height: "48px",
                 padding: "0 24px",
                 background: "linear-gradient(-13.24deg, #1E2029 1%, #0A0C17 99%)",
                 border: "1.6px solid white",
                 boxShadow: "0px 0px 48px 0px rgba(167,139,250,0.64)",
-                fontSize: "14px",
                 whiteSpace: "nowrap",
               }}
             >

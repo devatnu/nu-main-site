@@ -90,7 +90,7 @@ export default function SectionApproach() {
       {/* Header */}
       <div className="flex flex-col items-center gap-10 px-10">
         <div
-          className="inline-flex items-center gap-1 px-3 py-1.5 rounded-lg border font-body text-xs"
+          className="inline-flex items-center gap-1 px-3 py-1.5 rounded-lg border label-s"
           style={{ background: "var(--base-200)", borderColor: "var(--global-border)", color: "var(--text-primary)", }}
         >
           <Image src="/icons/chevron-right.svg" alt="" width={16} height={16} />
@@ -109,7 +109,7 @@ export default function SectionApproach() {
           >
             A collaborative approach
           </h2>
-          <p className="font-body text-center" style={{ fontSize: "16px", color: "var(--text-primary)", lineHeight: "20px" }}>
+          <p className="body-l text-center" style={{ color: "var(--text-primary)" }}>
             Design principles first.<br />Everything else follows.
           </p>
         </div>
@@ -185,13 +185,13 @@ export default function SectionApproach() {
           <div style={{ width: "712px" }}>
             <div ref={contentRef} className="flex flex-col items-center gap-6">
               <h3
-                className="font-body font-bold text-center w-full"
-                style={{ fontSize: "24px", lineHeight: "28px", color: "var(--text-primary)" }}
+                className="heading-xl text-center w-full"
+                style={{ color: "var(--text-primary)" }}
               >
                 {step.title}
               </h3>
 
-              <p className="font-body text-center" style={{ fontSize: "16px", lineHeight: "20px", color: "#6C6A6A" }}>
+              <p className="body-l text-center" style={{ color: "#6C6A6A" }}>
                 {step.description}
               </p>
 
@@ -205,7 +205,7 @@ export default function SectionApproach() {
                 <div className="flex items-center gap-3">
                   {step.tags.map((tag, j) => (
                     <div key={tag} className="flex items-center gap-3">
-                      <span className="font-body text-center whitespace-nowrap" style={{ fontSize: "16px", lineHeight: "20px", color: "#6C6A6A" }}>
+                      <span className="body-l text-center whitespace-nowrap" style={{ color: "#6C6A6A" }}>
                         {tag}
                       </span>
                       {j < step.tags.length - 1 && (
@@ -220,13 +220,13 @@ export default function SectionApproach() {
                 href="https://calendly.com/nishantupadhyay/ideas-die-soon-if-not-shared"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="font-body font-semibold text-white flex items-center justify-center rounded-xl transition-opacity duration-150 hover:opacity-80"
-                style={{ background: "#4755E3", height: "48px", width: "240px", fontSize: "14px" }}
+                className="label-m text-white flex items-center justify-center rounded-xl transition-opacity duration-150 hover:opacity-80"
+                style={{ background: "#4755E3", height: "48px", width: "240px" }}
               >
                 Schedule a 15 min call
               </a>
 
-              <p className="font-semibold text-center" style={{ fontSize: "12px", color: "#6C6A6A" }}>
+              <p className="label-s text-center" style={{ color: "#6C6A6A" }}>
                 {active + 1}/5
               </p>
 

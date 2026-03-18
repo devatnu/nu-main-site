@@ -91,7 +91,7 @@ export default function ImpactNumbers() {
         <div className="flex flex-col gap-4 flex-1">
           {/* Tag */}
           <div
-            className="inline-flex self-start items-center gap-1 px-3 py-1.5 rounded-lg border font-body text-xs"
+            className="inline-flex self-start items-center gap-1 px-3 py-1.5 rounded-lg border label-s"
             style={{
               background: "var(--base-200)",
               borderColor: "var(--global-border)",
@@ -134,7 +134,7 @@ export default function ImpactNumbers() {
               target="_blank"
               rel="noopener noreferrer"
               style={darkGradientBtn}
-              className="font-body font-semibold transition-opacity duration-150 hover:opacity-80 flex items-center justify-center"
+              className="label-m transition-opacity duration-150 hover:opacity-80 flex items-center justify-center"
             >
               Schedule a 15 min call
             </a>
@@ -160,8 +160,8 @@ export default function ImpactNumbers() {
             >
               <TypewriterNumber value={stat.number} delay={i * 600} />
               <span
-                className="font-body italic"
-                style={{ fontSize: "16px", color: "var(--text-primary)" }}
+                className="body-l italic"
+                style={{ color: "var(--text-primary)" }}
               >
                 {stat.label}
               </span>

@@ -37,7 +37,7 @@ export default async function ProjectDetail({ params }: { params: Promise<{ slug
         <div className="w-full max-w-[800px] flex flex-col gap-4">
           <Link
             href="/design"
-            className="font-body text-sm inline-flex items-center gap-1 transition-opacity hover:opacity-70"
+            className="body-m inline-flex items-center gap-1 transition-opacity hover:opacity-70"
             style={{ color: "#8E8F94" }}
           >
             ← All projects
@@ -61,7 +61,7 @@ export default async function ProjectDetail({ params }: { params: Promise<{ slug
           >
             {project.title}
           </h1>
-          <p className="font-body italic" style={{ fontSize: "16px", color: "#8E8F94" }}>
+          <p className="body-l italic" style={{ color: "#8E8F94" }}>
             {project.tag}
           </p>
 
@@ -122,7 +122,7 @@ export default async function ProjectDetail({ params }: { params: Promise<{ slug
           <div className="flex flex-col gap-8">
             {project.approach.map((item) => (
               <div key={item.heading} className="flex flex-col gap-2 pl-5" style={{ borderLeft: `3px solid ${project.accent}` }}>
-                <h3 className="font-body font-semibold italic" style={{ fontSize: "16px", color: "var(--text-primary)" }}>
+                <h3 className="heading-m italic" style={{ color: "var(--text-primary)" }}>
                   {item.heading}
                 </h3>
                 <p className="font-body" style={{ fontSize: "15px", lineHeight: "26px", color: "#4B4B52" }}>
@@ -169,8 +169,8 @@ export default async function ProjectDetail({ params }: { params: Promise<{ slug
               href={`/design/${prev.slug}`}
               className="flex flex-col gap-1 transition-opacity hover:opacity-70"
             >
-              <span className="font-body text-xs" style={{ color: "#8E8F94" }}>← Previous</span>
-              <span className="font-body font-semibold" style={{ fontSize: "14px", color: "var(--text-primary)", maxWidth: "280px" }}>
+              <span className="label-s" style={{ color: "#8E8F94" }}>← Previous</span>
+              <span className="label-m" style={{ color: "var(--text-primary)", maxWidth: "280px" }}>
                 {prev.title}
               </span>
             </Link>
@@ -180,8 +180,8 @@ export default async function ProjectDetail({ params }: { params: Promise<{ slug
               href={`/design/${next.slug}`}
               className="flex flex-col gap-1 items-end transition-opacity hover:opacity-70"
             >
-              <span className="font-body text-xs" style={{ color: "#8E8F94" }}>Next →</span>
-              <span className="font-body font-semibold" style={{ fontSize: "14px", color: "var(--text-primary)", maxWidth: "280px", textAlign: "right" }}>
+              <span className="label-s" style={{ color: "#8E8F94" }}>Next →</span>
+              <span className="label-m" style={{ color: "var(--text-primary)", maxWidth: "280px", textAlign: "right" }}>
                 {next.title}
               </span>
             </Link>

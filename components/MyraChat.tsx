@@ -167,8 +167,8 @@ function ArrowRight({ color = "white" }: { color?: string }) {
 function Bubble({ children }: { children: React.ReactNode }) {
   const t = useTheme();
   return (
-    <div className="font-body rounded-2xl w-full"
-      style={{ background: t.bubbleBg, color: t.bubbleText, padding: 12, fontSize: 14, lineHeight: "18px" }}>
+    <div className="body-m rounded-2xl w-full"
+      style={{ background: t.bubbleBg, color: t.bubbleText, padding: 12 }}>
       {children}
     </div>
   );
@@ -178,7 +178,7 @@ function Bubble({ children }: { children: React.ReactNode }) {
 function CTAButton({ label, href, icon = "arrow" }: { label: string; href: string; icon?: "arrow" | "download" }) {
   const t = useTheme();
   const inner = (
-    <span className="font-body font-semibold text-white flex items-center gap-2" style={{ fontSize: 14, lineHeight: "18px" }}>
+    <span className="label-m text-white flex items-center gap-2">
       {label}
       {icon === "download" ? (
         <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="white" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
@@ -234,8 +234,8 @@ function ContactsBubble({ text }: { text: string }) {
       <Bubble><p style={{ margin: 0 }}>{text}</p></Bubble>
       {CONTACT_CHIPS.map((c) => (
         <a key={c.label} href={c.href} target="_blank" rel="noopener noreferrer"
-          className="font-body font-semibold flex items-center justify-center shrink-0 transition-opacity hover:opacity-80"
-          style={{ background: c.gradient, color: "white", borderRadius: 32, padding: "8px 16px", fontSize: 14, lineHeight: "18px", textDecoration: "none" }}>
+          className="label-m flex items-center justify-center shrink-0 transition-opacity hover:opacity-80"
+          style={{ background: c.gradient, color: "white", borderRadius: 32, padding: "8px 16px", textDecoration: "none" }}>
           {c.label}
         </a>
       ))}
@@ -250,8 +250,8 @@ function TagsCTABubble({ text, tags, cta }: { text: string; tags?: string[]; cta
     <>
       <Bubble><p style={{ margin: 0 }}>{text}</p></Bubble>
       {tags?.map((tag) => (
-        <div key={tag} className="font-body font-semibold shrink-0"
-          style={{ background: t.chipBg, border: `1.6px solid ${t.chipBorder}`, color: t.chipText, borderRadius: 12, padding: "8px 16px", fontSize: 14, lineHeight: "18px" }}>
+        <div key={tag} className="label-m shrink-0"
+          style={{ background: t.chipBg, border: `1.6px solid ${t.chipBorder}`, color: t.chipText, borderRadius: 12, padding: "8px 16px" }}>
           {tag}
         </div>
       ))}
@@ -280,25 +280,25 @@ function ProjectsBubble({ text, projects }: { text: string; projects?: ProjectCa
         <div key={p.slug} className="flex flex-col gap-1 w-full overflow-hidden rounded-2xl"
           style={{ background: t.bubbleBg, padding: 12 }}>
           <div className="rounded-xl w-full" style={{ background: t.subBg, padding: 12 }}>
-            <p className="font-body font-semibold whitespace-nowrap overflow-hidden text-ellipsis"
-              style={{ color: t.chipText, fontSize: 16, lineHeight: "20px", margin: 0 }}>{p.name}</p>
+            <p className="heading-m whitespace-nowrap overflow-hidden text-ellipsis"
+              style={{ color: t.chipText, margin: 0 }}>{p.name}</p>
           </div>
           {p.tags?.length > 0 && (
             <div className="flex gap-3 items-center flex-wrap" style={{ padding: 4 }}>
               {p.tags.map((tag) => (
-                <div key={tag} className="font-body font-semibold shrink-0"
-                  style={{ background: t.subBg, border: `0.6px solid ${t.chipBorder}`, color: t.chipText, borderRadius: 16, padding: "4px 8px", fontSize: 12, lineHeight: "16px" }}>
+                <div key={tag} className="label-s shrink-0"
+                  style={{ background: t.subBg, border: `0.6px solid ${t.chipBorder}`, color: t.chipText, borderRadius: 16, padding: "4px 8px" }}>
                   {tag}
                 </div>
               ))}
             </div>
           )}
           <div style={{ padding: 4 }}>
-            <p className="font-body" style={{ color: t.chipText, fontSize: 14, lineHeight: "18px", margin: 0 }}>{p.description}</p>
+            <p className="body-m" style={{ color: t.chipText, margin: 0 }}>{p.description}</p>
           </div>
           <Link href={`/design/${p.slug}`}
-            className="font-body font-semibold text-white flex items-center justify-center gap-2 shrink-0 transition-opacity hover:opacity-80"
-            style={{ height: 40, borderRadius: 32, padding: "0 16px", background: t.ctaBg, border: `1px solid ${t.chipBorder}`, fontSize: 14, lineHeight: "18px", textDecoration: "none" }}>
+            className="label-m text-white flex items-center justify-center gap-2 shrink-0 transition-opacity hover:opacity-80"
+            style={{ height: 40, borderRadius: 32, padding: "0 16px", background: t.ctaBg, border: `1px solid ${t.chipBorder}`, textDecoration: "none" }}>
             View more <ArrowRight />
           </Link>
         </div>
@@ -477,8 +477,8 @@ export default function MyraChat() {
           onKeyDown={onKeyDown}
           placeholder="Ask me anything..."
           disabled={loading}
-          className="flex-1 font-body bg-transparent outline-none"
-          style={{ fontSize: 16, lineHeight: "20px", color: t.inputText }}
+          className="flex-1 body-l bg-transparent outline-none"
+          style={{ color: t.inputText }}
         />
         <button onClick={() => send()} disabled={!input.trim() || loading} aria-label="Send"
           className="flex items-center justify-center rounded-full shrink-0 transition-all"
@@ -488,7 +488,7 @@ export default function MyraChat() {
           </svg>
         </button>
       </div>
-      <p className="font-body text-center w-full" style={{ fontSize: 12, lineHeight: "16px", color: t.footerText }}>
+      <p className="body-s text-center w-full" style={{ color: t.footerText }}>
         Myra can make mistakes. For more clarity, contact me :)
       </p>
     </div>
@@ -518,24 +518,24 @@ export default function MyraChat() {
             <div className="flex-1 overflow-y-auto flex flex-col items-center" style={{ padding: "32px 16px" }}>
               <div className="flex flex-col gap-4 items-center w-full">
                 <MyraSphere size={108} video />
-                <p className="font-body text-center" style={{ color: t.nameColor, fontSize: 16, lineHeight: "20px" }}>Hey there!</p>
+                <p className="body-l text-center" style={{ color: t.nameColor }}>Hey there!</p>
                 <div className="flex flex-col gap-2 items-center py-2 w-full">
-                  <p className="font-display font-medium text-center whitespace-nowrap"
+                  <p className="display-s text-center whitespace-nowrap"
                     style={{ fontSize: 24, lineHeight: "28px", background: "linear-gradient(155.92deg, #000000 14.94%, #a78bfa 86.46%)", WebkitBackgroundClip: "text", WebkitTextFillColor: "transparent", backgroundClip: "text" }}>
                     Hi, I am Myra
                   </p>
-                  <p className="font-body text-center" style={{ color: t.nameColor, fontSize: 16, lineHeight: "20px" }}>
+                  <p className="body-l text-center" style={{ color: t.nameColor }}>
                     I know everything about Nishant&apos;s work, projects, and experience.
                   </p>
                 </div>
-                <p className="font-body italic text-center" style={{ fontSize: 14, lineHeight: "18px", color: "#5e3ac9" }}>
+                <p className="body-m italic text-center" style={{ color: "#5e3ac9" }}>
                   Ask me anything, or start with one of these:
                 </p>
                 <div className="flex flex-col gap-2 items-center w-full" style={{ paddingTop: 32, paddingBottom: 32 }}>
                   {SUGGESTIONS.map((s) => (
                     <button key={s} onClick={() => send(s)}
-                      className="font-body transition-opacity hover:opacity-70"
-                      style={{ color: t.bubbleText, background: t.bubbleBg, borderRadius: 16, padding: 12, fontSize: 14, lineHeight: "18px" }}>
+                      className="body-m transition-opacity hover:opacity-70"
+                      style={{ color: t.bubbleText, background: t.bubbleBg, borderRadius: 16, padding: 12 }}>
                       {s}
                     </button>
                   ))}
@@ -552,9 +552,9 @@ export default function MyraChat() {
                   <div key={i} className="flex gap-3 items-start w-full">
                     <UserAvatar />
                     <div className="flex flex-col gap-1 flex-1 min-w-0">
-                      <span className="font-body font-semibold" style={{ color: t.nameColor, fontSize: 16, lineHeight: "20px" }}>You</span>
-                      <div className="font-body rounded-2xl"
-                        style={{ background: t.bubbleBg, color: t.bubbleText, padding: 12, fontSize: 14, lineHeight: "18px" }}>
+                      <span className="heading-m" style={{ color: t.nameColor }}>You</span>
+                      <div className="body-m rounded-2xl"
+                        style={{ background: t.bubbleBg, color: t.bubbleText, padding: 12 }}>
                         {msg.content}
                       </div>
                     </div>

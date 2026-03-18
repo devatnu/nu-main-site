@@ -92,8 +92,8 @@ function WideCard({
             {project.title}
           </h2>
           <p
-            className="font-body"
-            style={{ fontSize: "16px", lineHeight: "20px", color: "var(--text-primary)" }}
+            className="body-l"
+            style={{ color: "var(--text-primary)" }}
           >
             {project.description}
           </p>
@@ -111,19 +111,14 @@ function WideCard({
             className="flex-1 flex flex-col gap-1 p-4 min-w-0 overflow-hidden"
           >
             <span
-              className="font-display font-semibold whitespace-nowrap"
-              style={{ fontSize: "32px", lineHeight: "36px", color: "#28364d" }}
+              className="display-l whitespace-nowrap"
+              style={{ color: "#28364d" }}
             >
               {stat.value}
             </span>
             <span
-              className="font-body italic whitespace-nowrap"
-              style={{
-                fontSize: "12px",
-                lineHeight: "16px",
-                fontWeight: 300,
-                color: "var(--text-primary)",
-              }}
+              className="helper-m whitespace-nowrap"
+              style={{ color: "var(--text-primary)" }}
             >
               {stat.label}
             </span>
@@ -132,7 +127,7 @@ function WideCard({
 
         {/* View more button */}
         <span
-          className="shrink-0 flex items-center justify-center font-body font-semibold text-white transition-opacity duration-150 group-hover:opacity-90"
+          className="shrink-0 flex items-center justify-center body-l font-semibold text-white transition-opacity duration-150 group-hover:opacity-90"
           style={{
             height: "56px",
             padding: "16px 48px",
@@ -140,8 +135,6 @@ function WideCard({
             background: "linear-gradient(-17.19deg, rgb(30,32,41) 1%, rgb(10,12,23) 99%)",
             border: "4px solid white",
             boxShadow: "0px 0px 48px 0px rgba(167,139,250,0.64)",
-            fontSize: "16px",
-            lineHeight: "20px",
           }}
         >
           View more
@@ -182,7 +175,7 @@ function CompactCard({
       {/* Text — centered */}
       <div className="flex flex-col gap-8 items-center px-4 py-8 flex-1">
         <p
-          className="font-display font-medium flex gap-2 items-center"
+          className="display-s flex gap-2 items-center"
           style={{ fontSize: "24px", lineHeight: "28px", color: textColor }}
         >
           <span>{tagFirst}</span>
@@ -200,10 +193,8 @@ function CompactCard({
           {project.title}
         </h2>
         <p
-          className="font-body text-center"
+          className="body-l text-center"
           style={{
-            fontSize: "16px",
-            lineHeight: "20px",
             color: textColor,
             opacity: lightText ? 0.85 : 1,
           }}
@@ -211,7 +202,7 @@ function CompactCard({
           {project.description}
         </p>
         <span
-          className="shrink-0 flex items-center justify-center font-body font-semibold text-white transition-opacity duration-150 group-hover:opacity-80"
+          className="shrink-0 flex items-center justify-center body-l font-semibold text-white transition-opacity duration-150 group-hover:opacity-80"
           style={{
             height: "56px",
             padding: "16px 48px",
@@ -221,8 +212,6 @@ function CompactCard({
               : "linear-gradient(-17.19deg, rgb(30,32,41) 1%, rgb(10,12,23) 99%)",
             border: lightText ? "4px solid #d9d9d9" : "4px solid white",
             boxShadow: lightText ? "none" : "0px 0px 48px 0px rgba(167,139,250,0.64)",
-            fontSize: "16px",
-            lineHeight: "20px",
           }}
         >
           View more
@@ -292,7 +281,7 @@ function StackedWideCard({
       {/* Text — centered */}
       <div className="flex flex-col gap-10 items-center px-4 py-8 relative z-10">
         <p
-          className="font-display font-medium flex gap-2 items-center"
+          className="display-s flex gap-2 items-center"
           style={{ fontSize: "24px", lineHeight: "28px", color: "var(--text-primary)" }}
         >
           <span>{tagFirst}</span>
@@ -310,8 +299,8 @@ function StackedWideCard({
           {project.title}
         </h2>
         <p
-          className="font-body text-center"
-          style={{ fontSize: "16px", lineHeight: "20px", color: "var(--text-primary)" }}
+          className="body-l text-center"
+          style={{ color: "var(--text-primary)" }}
         >
           {project.description}
         </p>
@@ -341,8 +330,8 @@ function StackedWideCard({
             className="flex-1 flex flex-col gap-1 p-4 min-w-0 overflow-hidden"
           >
             <span
-              className="font-display font-semibold whitespace-nowrap"
-              style={{ fontSize: "32px", lineHeight: "36px", color: "#28364d" }}
+              className="display-l whitespace-nowrap"
+              style={{ color: "#28364d" }}
             >
               {stat.value}
             </span>
@@ -355,7 +344,7 @@ function StackedWideCard({
           </div>
         ))}
         <span
-          className="shrink-0 flex items-center justify-center font-body font-semibold text-white transition-opacity duration-150 group-hover:opacity-90"
+          className="shrink-0 flex items-center justify-center body-l font-semibold text-white transition-opacity duration-150 group-hover:opacity-90"
           style={{
             height: "56px",
             padding: "16px 48px",
@@ -363,8 +352,6 @@ function StackedWideCard({
             background: "linear-gradient(-17.19deg, rgb(30,32,41) 1%, rgb(10,12,23) 99%)",
             border: "4px solid white",
             boxShadow: "0px 0px 48px 0px rgba(167,139,250,0.64)",
-            fontSize: "16px",
-            lineHeight: "20px",
           }}
         >
           View more
@@ -399,8 +386,8 @@ export default function DesignPage() {
           Projects
         </h1>
         <p
-          className="font-body"
-          style={{ fontSize: "16px", lineHeight: "20px", color: "#8E8F94" }}
+          className="body-l"
+          style={{ color: "#8E8F94" }}
         >
           Design principles first. Everything else follows.
         </p>

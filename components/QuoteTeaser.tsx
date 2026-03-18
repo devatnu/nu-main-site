@@ -59,7 +59,7 @@ export default function QuoteTeaser() {
       {/* Tag */}
       <div className="flex items-center gap-4 px-3 py-2">
         <Image src="/icons/star.png" alt="" width={24} height={24} />
-        <span className="font-body font-semibold whitespace-nowrap" style={{ fontSize: "20px", lineHeight: "24px", color: "#8E8F94" }}>
+        <span className="heading-l whitespace-nowrap" style={{ color: "#8E8F94" }}>
           In case you need this
         </span>
         <Image src="/icons/star.png" alt="" width={24} height={24} />
@@ -81,7 +81,7 @@ export default function QuoteTeaser() {
       {/* CTA */}
       <button
         onClick={nextQuote}
-        className="font-body font-semibold pulse-btn transition-opacity duration-150 hover:opacity-80"
+        className="label-m pulse-btn transition-opacity duration-150 hover:opacity-80"
         style={{
           height: "64px",
           padding: "0 48px",
@@ -90,8 +90,6 @@ export default function QuoteTeaser() {
           border: "4px solid white",
           boxShadow: "0px 0px 48px 0px rgba(167,139,250,0.64)",
           color: "#F0F1FD",
-          fontSize: "14px",
-          lineHeight: "18px",
           whiteSpace: "nowrap",
         }}
       >

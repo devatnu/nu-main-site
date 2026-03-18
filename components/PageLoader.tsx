@@ -59,8 +59,8 @@ export default function PageLoader() {
       </div>
       {offline && (
         <p
-          className="font-body mt-4"
-          style={{ fontSize: "14px", color: "var(--text-secondary, #8E8F94)" }}
+          className="body-m mt-4"
+          style={{ color: "var(--text-secondary, #8E8F94)" }}
         >
           Reconnecting…
         </p>

@@ -50,8 +50,8 @@ export default function Hero() {
 
       {/* Subtitle */}
       <p
-        className="relative z-10 text-center font-body"
-        style={{ fontSize: "16px", color: "#69686E", lineHeight: "20px" }}
+        className="relative z-10 text-center body-l"
+        style={{ color: "#69686E" }}
       >
         Building products, design systems, and teams that ship with clarity and impact.
       </p>
@@ -63,10 +63,9 @@ export default function Hero() {
           <div ref={ref} className="relative">
             <button
               onClick={() => setOpen((v) => !v)}
-              className="font-body font-semibold text-white rounded-xl transition-opacity duration-150 hover:opacity-80"
+              className="label-m text-white rounded-xl transition-opacity duration-150 hover:opacity-80"
               style={{
                 background: "#4755E3",
-                fontSize: "14px",
                 padding: "0 56px",
                 height: "48px",
               }}
@@ -88,8 +87,8 @@ export default function Hero() {
                 <Link
                   href="/design"
                   onClick={() => setOpen(false)}
-                  className="font-body font-semibold flex items-center gap-3 px-5 py-4 transition-colors hover:bg-[#f5f5f7]"
-                  style={{ fontSize: "14px", color: "var(--text-primary)" }}
+                  className="label-m flex items-center gap-3 px-5 py-4 transition-colors hover:bg-[#f5f5f7]"
+                  style={{ color: "var(--text-primary)" }}
                 >
                   <span style={{ fontSize: "18px" }}>🗂</span>
                   Projects I have worked upon
@@ -100,8 +99,8 @@ export default function Hero() {
                   target="_blank"
                   rel="noopener noreferrer"
                   onClick={() => setOpen(false)}
-                  className="font-body font-semibold flex items-center gap-3 px-5 py-4 transition-colors hover:bg-[#f5f5f7]"
-                  style={{ fontSize: "14px", color: "var(--text-primary)" }}
+                  className="label-m flex items-center gap-3 px-5 py-4 transition-colors hover:bg-[#f5f5f7]"
+                  style={{ color: "var(--text-primary)" }}
                 >
                   <span style={{ fontSize: "18px" }}>📅</span>
                   Schedule a call with me
@@ -113,7 +112,7 @@ export default function Hero() {
           {/* Ask Myra */}
           <button
             onClick={() => window.dispatchEvent(new CustomEvent("open-myra"))}
-            className="flex items-center gap-2 font-body font-semibold italic text-white rounded-xl border shimmer-ai-btn"
+            className="flex items-center gap-2 label-m italic text-white rounded-xl border shimmer-ai-btn"
             style={{
               background: "linear-gradient(-17deg, #1E2029 1%, #0A0C17 99%)",
               borderColor: "rgba(255,255,255,0.3)",
@@ -147,7 +146,7 @@ export default function Hero() {
       {/* Trust row */}
       <div className="relative z-10 flex items-center gap-4">
         <Image src="/icons/trust-avatars.png" alt="Users" height={32} width={96} className="object-contain" />
-        <p className="font-body text-sm">
+        <p className="body-m">
           <span className="italic" style={{ color: "var(--text-primary)" }}>Designed for </span>
           <span className="font-bold" style={{ color: "#4755E3" }}>120M+</span>
           <span className="italic" style={{ color: "var(--text-primary)" }}> Indians</span>

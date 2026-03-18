@@ -34,7 +34,7 @@ function CardTag({ tag, tagIcon, tagIcons }: { tag: string; tagIcon?: string; ta
       className="inline-flex items-center gap-2 px-3 py-2 rounded-lg self-start"
       style={{ background: "var(--base-200)", border: "1px solid var(--global-border)" }}
     >
-      <span className="font-body font-semibold" style={{ fontSize: "12px", lineHeight: "16px", color: "var(--text-primary)" }}>
+      <span className="label-s" style={{ color: "var(--text-primary)" }}>
         {tag}
       </span>
       {tagIcon && <Image src={tagIcon} alt="" width={20} height={20} className="object-cover" />}
@@ -53,7 +53,7 @@ export default function VisionTeaser() {
       {/* Header */}
       <div className="flex flex-col items-center gap-10 mb-24">
         <div
-          className="inline-flex items-center gap-1 px-3 py-1.5 rounded-lg border font-body text-xs"
+          className="inline-flex items-center gap-1 px-3 py-1.5 rounded-lg border label-s"
           style={{ background: "var(--base-200)", borderColor: "var(--global-border)", color: "#8E8F94" }}
         >
           <Image src="/icons/chevron-right.svg" alt="" width={16} height={16} />
@@ -72,7 +72,7 @@ export default function VisionTeaser() {
           >
             What&apos;s up these days
           </h2>
-          <p className="font-body text-center" style={{ fontSize: "16px", lineHeight: "20px", color: "var(--text-primary)" }}>
+          <p className="body-l text-center" style={{ color: "var(--text-primary)" }}>
             I&apos;m always experimenting with new ideas<br />
             designing, building, and exploring concepts that push my thinking and craft forward.
           </p>
@@ -97,12 +97,12 @@ export default function VisionTeaser() {
             <CardTag tag={tall.tag} tagIcon={tall.tagIcon} />
             <div>
               {tall.title.map((line, i) => (
-                <p key={i} className="font-body font-bold" style={{ fontSize: "24px", lineHeight: "28px", color: "var(--text-primary)" }}>
+                <p key={i} className="heading-xl" style={{ color: "var(--text-primary)" }}>
                   {line}
                 </p>
               ))}
             </div>
-            <p className="font-body" style={{ fontSize: "16px", lineHeight: "20px", color: "var(--text-primary)" }}>
+            <p className="body-l" style={{ color: "var(--text-primary)" }}>
               {tall.subtitle}
             </p>
           </div>
@@ -129,12 +129,12 @@ export default function VisionTeaser() {
                 <CardTag tag={card.tag} tagIcon={card.tagIcon} tagIcons={card.tagIcons} />
                 <div>
                   {card.title.map((line, i) => (
-                    <p key={i} className="font-body font-bold" style={{ fontSize: "24px", lineHeight: "28px", color: "var(--text-primary)" }}>
+                    <p key={i} className="heading-xl" style={{ color: "var(--text-primary)" }}>
                       {line}
                     </p>
                   ))}
                 </div>
-                <p className="font-body" style={{ fontSize: "16px", lineHeight: "20px", color: "var(--text-primary)" }}>
+                <p className="body-l" style={{ color: "var(--text-primary)" }}>
                   {card.subtitle}
                 </p>
               </div>

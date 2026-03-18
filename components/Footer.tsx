@@ -44,7 +44,7 @@ export default function Footer() {
           <p className="font-display font-bold" style={{ fontSize: "64px", lineHeight: "72px" }}>
             You&apos;ve seen what I do.
           </p>
-          <p className="font-display font-semibold" style={{ fontSize: "32px", lineHeight: "36px" }}>
+          <p className="display-l">
             Now let&apos;s see what WEEE can do together.
           </p>
         </div>
@@ -53,21 +53,20 @@ export default function Footer() {
         <div className="flex items-center gap-6 relative z-10">
           <a
             href="mailto:iamnishantupadhyay@gmail.com"
-            className="flex items-center justify-center font-body font-semibold text-white rounded-xl transition-opacity duration-150 hover:opacity-80"
-            style={{ background: "#4755E3", border: "1px solid var(--global-border)", height: "48px", padding: "0 56px", fontSize: "14px", whiteSpace: "nowrap" }}
+            className="flex items-center justify-center label-m text-white rounded-xl transition-opacity duration-150 hover:opacity-80"
+            style={{ background: "#4755E3", border: "1px solid var(--global-border)", height: "48px", padding: "0 56px", whiteSpace: "nowrap" }}
           >
             Drop me an email
           </a>
           <button
             onClick={() => window.dispatchEvent(new CustomEvent("open-myra"))}
-            className="flex items-center gap-4 font-body font-semibold italic text-white rounded-xl shimmer-ai-btn"
+            className="flex items-center gap-4 label-m italic text-white rounded-xl shimmer-ai-btn"
             style={{
               background: "linear-gradient(-14.55deg, #1E2029 1%, #0A0C17 99%)",
               border: "1.6px solid white",
               boxShadow: "0px 0px 48px 0px rgba(167,139,250,0.64)",
               height: "48px",
               padding: "0 16px 0 24px",
-              fontSize: "14px",
               whiteSpace: "nowrap",
             }}
           >
@@ -87,16 +86,14 @@ export default function Footer() {
             href="https://drive.google.com/uc?export=download&id=1CtaL9u0L-xnbJL1VNnM5tLVK95e8GIrO"
             target="_blank"
             rel="noopener noreferrer"
-            className="font-body italic text-white underline underline-offset-4 transition-opacity duration-150 hover:opacity-70"
-            style={{ fontSize: "16px", lineHeight: "20px" }}
+            className="body-l italic text-white underline underline-offset-4 transition-opacity duration-150 hover:opacity-70"
           >
             Tap to download Resume
           </a>
 
           <a
             href="mailto:iamnishantupadhyay@gmail.com"
-            className="font-body italic text-white underline underline-offset-4 transition-opacity duration-150 hover:opacity-70"
-            style={{ fontSize: "16px", lineHeight: "20px" }}
+            className="body-l italic text-white underline underline-offset-4 transition-opacity duration-150 hover:opacity-70"
           >
             iamnishantupadhyay@gmail.com
           </a>
@@ -106,8 +103,8 @@ export default function Footer() {
               href="https://www.linkedin.com/in/nishantupadhyay0/"
               target="_blank"
               rel="noopener noreferrer"
-              className="flex items-center gap-4 font-body font-semibold text-white rounded-full transition-opacity duration-150 hover:opacity-80"
-              style={{ background: "#007FBC", border: "1px solid var(--global-border)", height: "48px", padding: "0 24px", fontSize: "14px", whiteSpace: "nowrap" }}
+              className="flex items-center gap-4 label-m text-white rounded-full transition-opacity duration-150 hover:opacity-80"
+              style={{ background: "#007FBC", border: "1px solid var(--global-border)", height: "48px", padding: "0 24px", whiteSpace: "nowrap" }}
             >
               Connect over LinkedIn
               <div className="relative shrink-0" style={{ width: "32px", height: "32px" }}>
@@ -118,8 +115,8 @@ export default function Footer() {
               href="https://wa.me/+917508631919"
               target="_blank"
               rel="noopener noreferrer"
-              className="flex items-center gap-4 font-body font-semibold text-white rounded-full transition-opacity duration-150 hover:opacity-80"
-              style={{ background: "#23B33A", border: "1px solid var(--global-border)", height: "48px", padding: "0 24px", fontSize: "14px", whiteSpace: "nowrap" }}
+              className="flex items-center gap-4 label-m text-white rounded-full transition-opacity duration-150 hover:opacity-80"
+              style={{ background: "#23B33A", border: "1px solid var(--global-border)", height: "48px", padding: "0 24px", whiteSpace: "nowrap" }}
             >
               WhatsApp
               <div className="relative shrink-0" style={{ width: "32px", height: "32px" }}>
@@ -139,8 +136,8 @@ export default function Footer() {
           Made with passion ❤️,<br />Guided by vision 🥽
         </p>
         <p
-          className="font-body italic text-center"
-          style={{ fontSize: "12px", lineHeight: "16px", fontWeight: 300, color: "#6C6A6A" }}
+          className="helper-m text-center"
+          style={{ color: "#6C6A6A" }}
         >
           © All rights reserved
         </p>

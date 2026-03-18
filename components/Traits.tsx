@@ -108,7 +108,7 @@ function AurumModal({ onClose }: { onClose: () => void }) {
             Contact
           </a>
         </div>
-        <button onClick={onClose} className="font-body text-sm hover:opacity-60 transition-opacity" style={{ color: "#94a3b8", alignSelf: "center" }}>
+        <button onClick={onClose} className="body-m hover:opacity-60 transition-opacity" style={{ color: "#94a3b8", alignSelf: "center" }}>
           Close
         </button>
       </div>
@@ -167,10 +167,10 @@ export default function Traits() {
           {/* Card A: I build — 40% */}
           <div style={{ ...cardBase, background: "white", padding: "40px", flex: "0 0 40%" }}>
             <div className="flex flex-col gap-2">
-              <h3 className="font-body font-bold" style={{ fontSize: "24px", lineHeight: "28px", color: "var(--text-primary)" }}>
+              <h3 className="heading-xl" style={{ color: "var(--text-primary)" }}>
                 I build
               </h3>
-              <p className="font-body" style={{ fontSize: "16px", lineHeight: "20px", color: "var(--text-primary)" }}>
+              <p className="body-l" style={{ color: "var(--text-primary)" }}>
                 The foundation others scale on
               </p>
             </div>
@@ -186,10 +186,10 @@ export default function Traits() {
                 <Image src="/traits/traits-i-turn.png" alt="" fill className="object-cover" />
               </div>
               <div className="flex flex-col justify-start gap-2 py-4">
-                <h3 className="font-body font-bold" style={{ fontSize: "24px", lineHeight: "28px", color: "var(--text-primary)" }}>
+                <h3 className="heading-xl" style={{ color: "var(--text-primary)" }}>
                   I turn
                 </h3>
-                <p className="font-body" style={{ fontSize: "16px", lineHeight: "20px", color: "var(--text-primary)" }}>
+                <p className="body-l" style={{ color: "var(--text-primary)" }}>
                   Creative teams into creative forces
                 </p>
               </div>
@@ -206,10 +206,10 @@ export default function Traits() {
           <div style={{ ...cardBase, background: "#4755E3", padding: "40px", flex: "1 0 0" }}>
             <div className="flex flex-col gap-6" style={{ maxWidth: "240px" }}>
               <div className="flex flex-col gap-2">
-                <h3 className="font-body font-bold" style={{ fontSize: "24px", lineHeight: "28px", color: "white" }}>
+                <h3 className="heading-xl" style={{ color: "white" }}>
                   I let
                 </h3>
-                <p className="font-body" style={{ fontSize: "16px", lineHeight: "20px", color: "rgba(255,255,255,0.8)" }}>
+                <p className="body-l" style={{ color: "rgba(255,255,255,0.8)" }}>
                   Users write the brief
                 </p>
               </div>
@@ -221,7 +221,7 @@ export default function Traits() {
                   style={darkGradientBtn}
                   className="transition-opacity duration-150 hover:opacity-80 flex items-center justify-center"
                 >Schedule a 15 min call</a>
-                <p className="font-body italic" style={{ fontSize: "14px", color: "rgba(255,255,255,0.7)" }}>
+                <p className="body-m italic" style={{ color: "rgba(255,255,255,0.7)" }}>
                   Something else may workout?
                 </p>
               </div>
@@ -234,23 +234,23 @@ export default function Traits() {
           {/* Card D: I build systems */}
           <div style={{ ...cardBase, background: "white", padding: "40px", flex: "1 0 0" }}>
             <div className="flex flex-col gap-3">
-              <h3 className="font-body font-bold" style={{ fontSize: "24px", lineHeight: "28px", color: "var(--text-primary)" }}>
+              <h3 className="heading-xl" style={{ color: "var(--text-primary)" }}>
                 I build
               </h3>
-              <p className="font-body" style={{ fontSize: "16px", lineHeight: "20px", color: "var(--text-primary)" }}>
+              <p className="body-l" style={{ color: "var(--text-primary)" }}>
                 Systems that outlive my tenure
               </p>
               <div className="flex flex-col items-end gap-2 mt-2">
                 {DESIGN_SYSTEMS.map(({ name, href }) =>
                   href ? (
                     <a key={name} href={href} target="_blank" rel="noopener noreferrer"
-                      className="font-display font-medium underline underline-offset-2 hover:opacity-70 transition-opacity"
+                      className="display-s underline underline-offset-2 hover:opacity-70 transition-opacity"
                       style={gradientText}>
                       {name}
                     </a>
                   ) : (
                     <button key={name} onClick={() => setAurumOpen(true)}
-                      className="font-display font-medium underline underline-offset-2 hover:opacity-70 transition-opacity"
+                      className="display-s underline underline-offset-2 hover:opacity-70 transition-opacity"
                       style={gradientText}>
                       {name}
                     </button>
@@ -275,10 +275,10 @@ export default function Traits() {
           <div className="relative flex items-center justify-center h-full z-10">
             <div className="flex flex-col items-center gap-4">
               <div className="text-center">
-                <h3 className="font-body font-bold" style={{ fontSize: "24px", lineHeight: "28px", color: "var(--text-primary)" }}>
+                <h3 className="heading-xl" style={{ color: "var(--text-primary)" }}>
                   I&apos;ve taken
                 </h3>
-                <p className="font-body" style={{ fontSize: "16px", lineHeight: "20px", color: "var(--text-primary)" }}>
+                <p className="body-l" style={{ color: "var(--text-primary)" }}>
                   Brands from vision to Series A
                 </p>
               </div>
@@ -298,10 +298,10 @@ export default function Traits() {
           {/* Card F: I learned */}
           <div style={{ ...cardBase, background: "white", padding: "40px" }}>
             <div className="flex flex-col gap-2">
-              <h3 className="font-body font-bold" style={{ fontSize: "24px", lineHeight: "28px", color: "var(--text-primary)" }}>
+              <h3 className="heading-xl" style={{ color: "var(--text-primary)" }}>
                 I learned
               </h3>
-              <p className="font-body" style={{ fontSize: "16px", lineHeight: "20px", color: "var(--text-primary)" }}>
+              <p className="body-l" style={{ color: "var(--text-primary)" }}>
                 Their language so nothing gets lost
               </p>
             </div>
@@ -313,10 +313,10 @@ export default function Traits() {
           {/* Card G: I track */}
           <div style={{ ...cardBase, background: "white", padding: "40px" }}>
             <div className="flex flex-col gap-2">
-              <h3 className="font-body font-bold" style={{ fontSize: "24px", lineHeight: "28px", color: "var(--text-primary)" }}>
+              <h3 className="heading-xl" style={{ color: "var(--text-primary)" }}>
                 I track
               </h3>
-              <p className="font-body" style={{ fontSize: "16px", lineHeight: "20px", color: "var(--text-primary)" }}>
+              <p className="body-l" style={{ color: "var(--text-primary)" }}>
                 Every drop-off, every hesitation
               </p>
             </div>
@@ -328,10 +328,10 @@ export default function Traits() {
           {/* Card H: I don't just design */}
           <div style={{ ...cardBase, background: "white", padding: "40px" }}>
             <div className="flex flex-col gap-2">
-              <h3 className="font-body font-bold" style={{ fontSize: "24px", lineHeight: "28px", color: "var(--text-primary)", maxWidth: "211px" }}>
+              <h3 className="heading-xl" style={{ color: "var(--text-primary)", maxWidth: "211px" }}>
                 I don&apos;t just design
               </h3>
-              <p className="font-body" style={{ fontSize: "16px", lineHeight: "20px", color: "var(--text-primary)", maxWidth: "237px" }}>
+              <p className="body-l" style={{ color: "var(--text-primary)", maxWidth: "237px" }}>
                 I create, develop, and lead
               </p>
             </div>
