@@ -16,8 +16,6 @@ const formulaStyle: React.CSSProperties = {
   bottom: "118px",
   right: "183.5px",
   transform: "translateX(50%) translateY(100%)",
-  fontSize: "64px",
-  lineHeight: "72px",
   background: "linear-gradient(-13deg, #0D0F1A 1%, #4755E3 99%)",
   WebkitBackgroundClip: "text",
   WebkitTextFillColor: "transparent",
@@ -36,7 +34,7 @@ function AnimatedFormula() {
   }, [step]);
 
   return (
-    <p className="absolute display-xl whitespace-nowrap text-center" style={formulaStyle}>
+    <p className="absolute display-2xl whitespace-nowrap text-center" style={formulaStyle}>
       <span key={step} className="step-content-enter inline-block">
         {formulaSteps[step]}
       </span>

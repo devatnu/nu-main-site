@@ -25,8 +25,6 @@ const darkGradientBtn: React.CSSProperties = {
 };
 
 const numberStyle: React.CSSProperties = {
-  fontSize: "64px",
-  lineHeight: "72px",
   whiteSpace: "nowrap",
   background: "var(--text-secondary)",
   WebkitBackgroundClip: "text",
@@ -104,9 +102,8 @@ export default function ImpactNumbers() {
 
           {/* Heading */}
           <h2
-            className="display-xl"
+            className="display-2xl"
             style={{
-              fontSize: "64px",
               lineHeight: "1.05",
               background: "linear-gradient(-13deg, #0D0F1A 1%, #4755E3 99%)",
               WebkitBackgroundClip: "text",

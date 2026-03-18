@@ -36,11 +36,7 @@ export default function Hero() {
       {/* Heading */}
       <div className="relative z-10 flex flex-col items-center gap-0">
         <h1
-          className="display-xl text-center shimmer-hero-title"
-          style={{
-            fontSize: "64px",
-            lineHeight: "72px",
-          }}
+          className="display-2xl text-center shimmer-hero-title"
         >
           I help brands move
           <br />

@@ -49,10 +49,8 @@ export default async function ProjectDetail({ params }: { params: Promise<{ slug
             {project.brand}
           </div>
           <h1
-            className="font-display font-bold"
+            className="display-xl"
             style={{
-              fontSize: "48px",
-              lineHeight: "56px",
               background: "linear-gradient(135deg, #0f172a 0%, #475569 100%)",
               WebkitBackgroundClip: "text",
               WebkitTextFillColor: "transparent",

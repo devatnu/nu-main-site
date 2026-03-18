@@ -155,9 +155,8 @@ export default function Brands() {
           <Image src="/icons/chevron-left.svg" alt="" width={16} height={16} />
         </div>
         <h2
-          className="display-xl text-center"
+          className="display-2xl text-center"
           style={{
-            fontSize: "64px",
             lineHeight: "1.05",
             background: "linear-gradient(-13deg, #0D0F1A 1%, #4755E3 99%)",
             WebkitBackgroundClip: "text",

@@ -86,8 +86,8 @@ function WideCard({
             )}
           </p>
           <h2
-            className="display-xl"
-            style={{ fontSize: "64px", lineHeight: "72px", color: "var(--text-primary)" }}
+            className="display-2xl"
+            style={{ color: "var(--text-primary)" }}
           >
             {project.title}
           </h2>
@@ -187,8 +187,8 @@ function CompactCard({
           )}
         </p>
         <h2
-          className="font-display font-bold text-center"
-          style={{ fontSize: "48px", lineHeight: "56px", color: textColor, whiteSpace: "pre-line" }}
+          className="display-xl text-center"
+          style={{ color: textColor, whiteSpace: "pre-line" }}
         >
           {project.title}
         </h2>
@@ -293,8 +293,8 @@ function StackedWideCard({
           )}
         </p>
         <h2
-          className="display-xl text-center"
-          style={{ fontSize: "64px", lineHeight: "72px", color: "var(--text-primary)" }}
+          className="display-2xl text-center"
+          style={{ color: "var(--text-primary)" }}
         >
           {project.title}
         </h2>
@@ -373,10 +373,8 @@ export default function DesignPage() {
         style={{ animationDelay: "0ms", paddingLeft: "128px", paddingRight: "128px" }}
       >
         <h1
-          className="display-xl"
+          className="display-2xl"
           style={{
-            fontSize: "64px",
-            lineHeight: "72px",
             background: "linear-gradient(-13deg, #0D0F1A 1%, #4755E3 99%)",
             WebkitBackgroundClip: "text",
             WebkitTextFillColor: "transparent",
