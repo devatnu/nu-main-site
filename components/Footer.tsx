@@ -136,7 +136,7 @@ export default function Footer() {
           className="font-display font-bold text-center whitespace-nowrap"
           style={{ fontSize: "64px", lineHeight: "72px", color: "#8E8F94" }}
         >
-          Built with ❤️ & Claude Code · 2026
+          Made with passion ❤️,<br />Guided by vision 🥽
         </p>
         <p
           className="font-body italic text-center"

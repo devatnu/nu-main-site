@@ -1,6 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { projects, Project } from "@/lib/projects";
+import Footer from "@/components/Footer";
 
 export const metadata = {
   title: "Projects — Nishant Upadhyay",
@@ -452,6 +453,7 @@ export default function DesignPage() {
           );
         })}
       </div>
+      <Footer />
     </main>
   );
 }
