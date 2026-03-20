@@ -1,16 +1,15 @@
 import { ImageResponse } from "next/og";
+import { readFile } from "fs/promises";
+import path from "path";
 
-export const runtime = "edge";
 export const alt = "Nishant Upadhyay — Founding Product Designer";
 export const size = { width: 1200, height: 630 };
 export const contentType = "image/png";
 
 export default async function Image() {
-  const bricolage = await fetch(
-    new URL(
-      "https://fonts.gstatic.com/s/bricolagegrotesque/v10/3y9U6as8bTXq_nANBjzKo3IeZx8z6up5BeSl5HZtRaFPFBFmFw.woff2"
-    )
-  ).then((res) => res.arrayBuffer());
+  const fontData = await readFile(
+    path.join(process.cwd(), "public/fonts/BricolageGrotesque-Bold.ttf")
+  );
 
   return new ImageResponse(
     (
@@ -77,7 +76,7 @@ export default async function Image() {
       fonts: [
         {
           name: "Bricolage Grotesque",
-          data: bricolage,
+          data: fontData,
           style: "normal",
           weight: 700,
         },
