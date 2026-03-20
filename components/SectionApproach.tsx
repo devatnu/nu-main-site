@@ -215,16 +215,6 @@ export default function SectionApproach() {
                 </div>
               </div>
 
-              <a
-                href="https://calendly.com/nishantupadhyay/ideas-die-soon-if-not-shared"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="label-m text-white flex items-center justify-center rounded-xl transition-opacity duration-150 hover:opacity-80"
-                style={{ background: "#4755E3", height: "48px", width: "240px" }}
-              >
-                Schedule a 15 min call
-              </a>
-
               <p className="label-s text-center" style={{ color: "#6C6A6A" }}>
                 {active + 1}/5
               </p>

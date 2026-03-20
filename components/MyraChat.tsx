@@ -340,11 +340,11 @@ function MyraMessage({ msg, loading = false }: { msg?: Message; loading?: boolea
 
   return (
     <div className="flex gap-2 items-start w-full">
-      <div className="flex flex-col gap-[6px] flex-1 min-w-0 items-end">
+      <MyraSphere size={36} loading={loading} />
+      <div className="flex flex-col gap-[6px] flex-1 min-w-0 items-start">
         <span className="font-body font-bold" style={{ color: t.nameColor, fontSize: 16, lineHeight: "22px", letterSpacing: "-0.07px" }}>Myra</span>
         {renderContent()}
       </div>
-      <MyraSphere size={36} loading={loading} />
     </div>
   );
 }
@@ -549,15 +549,15 @@ export default function MyraChat() {
             <div className="flex-1 overflow-y-auto flex flex-col gap-5" style={{ padding: "32px 16px", background: t.panelBg }}>
               {messages.map((msg, i) =>
                 msg.role === "user" ? (
-                  <div key={i} className="flex gap-3 items-start w-full">
-                    <UserAvatar />
-                    <div className="flex flex-col gap-1 flex-1 min-w-0">
+                  <div key={i} className="flex gap-3 items-start w-full justify-end">
+                    <div className="flex flex-col gap-1 items-end min-w-0">
                       <span className="heading-m" style={{ color: t.nameColor }}>You</span>
                       <div className="body-m rounded-2xl"
                         style={{ background: t.bubbleBg, color: t.bubbleText, padding: 12 }}>
                         {msg.content}
                       </div>
                     </div>
+                    <UserAvatar />
                   </div>
                 ) : (
                   <MyraMessage key={i} msg={msg} />
