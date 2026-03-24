@@ -17,7 +17,7 @@ export default function Hero() {
   }, []);
 
   return (
-    <section id="hero" className="relative flex flex-col items-center pt-[200px] pb-9 gap-10">
+    <section id="hero" className="relative flex flex-col items-center pt-[120px] sm:pt-[160px] lg:pt-[200px] pb-9 gap-6 lg:gap-10 px-4 sm:px-8">
 
       {/* Tag */}
       <div
@@ -34,10 +34,8 @@ export default function Hero() {
       </div>
 
       {/* Heading */}
-      <div className="relative z-10 flex flex-col items-center gap-0">
-        <h1
-          className="display-2xl text-center shimmer-hero-title"
-        >
+      <div className="relative z-10 flex flex-col items-center gap-0 w-full">
+        <h1 className="display-2xl text-center shimmer-hero-title max-w-[90vw] sm:max-w-none">
           I help brands move
           <br />
           from idea to scale
@@ -46,20 +44,20 @@ export default function Hero() {
 
       {/* Subtitle */}
       <p
-        className="relative z-10 text-center body-l"
+        className="relative z-10 text-center body-l max-w-[90vw] sm:max-w-[560px]"
         style={{ color: "#69686E" }}
       >
         Building products, design systems, and teams that ship with clarity and impact.
       </p>
 
       {/* Button group */}
-      <div className="relative z-50 flex flex-col items-center gap-4">
-        <div className="flex items-center gap-5">
+      <div className="relative z-50 flex flex-col items-center gap-4 w-full sm:w-auto">
+        <div className="flex flex-col sm:flex-row items-center gap-3 sm:gap-5 w-full sm:w-auto">
           {/* Primary CTA */}
-          <div ref={ref} className="relative">
+          <div ref={ref} className="relative w-full sm:w-auto">
             <button
               onClick={() => setOpen((v) => !v)}
-              className="label-m text-white rounded-xl transition-opacity duration-150 hover:opacity-80"
+              className="label-m text-white rounded-xl transition-opacity duration-150 hover:opacity-80 w-full sm:w-auto"
               style={{
                 background: "#4755E3",
                 padding: "0 56px",
@@ -108,7 +106,7 @@ export default function Hero() {
           {/* Ask Myra */}
           <button
             onClick={() => window.dispatchEvent(new CustomEvent("open-myra"))}
-            className="flex items-center gap-2 label-m italic text-white rounded-xl border shimmer-ai-btn"
+            className="flex items-center justify-center gap-2 label-m italic text-white rounded-xl border shimmer-ai-btn w-full sm:w-auto"
             style={{
               background: "linear-gradient(-17deg, #1E2029 1%, #0A0C17 99%)",
               borderColor: "rgba(255,255,255,0.3)",

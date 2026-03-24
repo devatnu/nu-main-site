@@ -78,6 +78,17 @@ body {
   .helper-s    { font-family: var(--font-body); font-size: 10px; line-height: 14px; font-weight: 400; }
 }
 
+/* Responsive display scale */
+@media (max-width: 639px) {
+  .display-2xl { font-size: 36px; line-height: 44px; }
+  .display-xl  { font-size: 28px; line-height: 36px; }
+  .display-l   { font-size: 24px; line-height: 30px; }
+}
+@media (min-width: 640px) and (max-width: 1023px) {
+  .display-2xl { font-size: 48px; line-height: 56px; }
+  .display-xl  { font-size: 36px; line-height: 44px; }
+}
+
 .gradient-hero-text {
   background: var(--gradient-text);
   -webkit-background-clip: text;
