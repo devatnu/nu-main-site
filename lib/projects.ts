@@ -8,7 +8,7 @@ export interface Project {
   previewRadius: string;
   brand: string;
   accent: string;
-  bannerIndex: number;
+  bannerImage: string;
   context: string;
   problem: string;
   approach: { heading: string; body: string }[];
@@ -19,8 +19,8 @@ export interface Project {
 export const projects: Project[] = [
   {
     slug: "kuber",
-    bannerIndex: 1,
-    title: "Kuber — AI-Enabled Wealth Experience",
+    bannerImage: "/projects/banners/1.png",
+    title: "Kuber Wealth: AI-Enabled Wealth Experience",
     tag: "Wealth · Fintech · Concept to Launch",
     description:
       "Designed an AI-powered wealth experience that replaced fund selection with goal-based plans and natural language discovery. Concept to launch — 17.9% increase in investment inflows.",
@@ -29,10 +29,10 @@ export const projects: Project[] = [
       { value: "NLP", label: "discovery layer" },
       { value: "Concept →", label: "launch in one sprint" },
     ],
-    previewImage: "/problem_cards/preview/preview_1.png",
+    previewImage: "/projects/preview/preview_1.png",
     previewRadius: "32px",
     brand: "Wealth",
-    accent: "#F59E0B",
+    accent: "#000000",
     context:
       "Bachatt targets 30Cr+ self-employed Indians earning ₹30–70K/month — most of whom have never invested. I defined the product concept and designed Kuber end-to-end, working across product, engineering, and business.",
     problem:
@@ -58,7 +58,7 @@ export const projects: Project[] = [
   },
   {
     slug: "enabling-mf-underserved-india",
-    bannerIndex: 2,
+    bannerImage: "/projects/banners/2.png",
     title: "Enabling Mutual Funds for Underserved India",
     tag: "Instant FD · Fintech · Daily Savings Platform",
     description:
@@ -68,10 +68,10 @@ export const projects: Project[] = [
       { value: "12%", label: "daily SIP adoption" },
       { value: "New cohort", label: "of investors created" },
     ],
-    previewImage: "/problem_cards/preview/preview_2.png",
+    previewImage: "/projects/preview/preview_2.png",
     previewRadius: "20px",
     brand: "Insta FD",
-    accent: "#10B981",
+    accent: "#1026b9",
     context:
       "Bachatt's core users — small business owners, shopkeepers, first-time investors earning ₹30–70K/month — don't save the way traditional investment platforms assume. I led the design of the daily investing experience end-to-end.",
     problem:
@@ -97,7 +97,7 @@ export const projects: Project[] = [
   },
   {
     slug: "milestones-rewards",
-    bannerIndex: 4,
+    bannerImage: "/projects/banners/4.png",
     title: "Milestones & Rewards — Informed customer retention",
     tag: "Bachatt · Retention · Behavioural Retention",
     description:
@@ -107,7 +107,7 @@ export const projects: Project[] = [
       { value: "3-week", label: "Engagement lift" },
       { value: "Awareness", label: "Informed Rewards" },
     ],
-    previewImage: "/problem_cards/preview/preview_4.png",
+    previewImage: "/projects/preview/preview_4.png",
     previewRadius: "32px",
     brand: "Bachatt",
     accent: "#F59E0B",
@@ -136,7 +136,7 @@ export const projects: Project[] = [
   },
   {
     slug: "gold-and-silver",
-    bannerIndex: 3,
+    bannerImage: "/projects/banners/3.png",
     title: "Gold & Silver — Precious Metals Investing",
     tag: "Metal · Fintech · New Product Line",
     description:
@@ -146,10 +146,10 @@ export const projects: Project[] = [
       { value: "Dynamic", label: "portfolio rebalancing" },
       { value: "Live", label: "rates & expert insights" },
     ],
-    previewImage: "/problem_cards/preview/preview_3.png",
+    previewImage: "/projects/preview/preview_3.png",
     previewRadius: "20px",
     brand: "Bachatt",
-    accent: "#D97706",
+    accent: "#ac8805",
     context:
       "After a year of research, Bachatt split its single wealth product into segmented offerings based on user goals — high-growth equity, stable FD-like returns, and precious metals. I designed Gold & Silver as a standalone product from concept to launch.",
     problem:
@@ -175,7 +175,7 @@ export const projects: Project[] = [
   },
   {
     slug: "loans-underserved-india",
-    bannerIndex: 6,
+    bannerImage: "/projects/banners/6.png",
     title: "Insta Loans - for Underserved\nIndia",
     tag: "Loans · Fintech · Lending Product",
     description:
@@ -185,10 +185,10 @@ export const projects: Project[] = [
       { value: "3", label: "lending partners onboarded" },
       { value: "First-time", label: "borrower focused" },
     ],
-    previewImage: "/problem_cards/preview/preview_6.png",
+    previewImage: "/projects/preview/preview_6.png",
     previewRadius: "32px",
     brand: "Bachatt",
-    accent: "#EF4444",
+    accent: "#6a00ff",
     context:
       "Bachatt's users — small business owners, shopkeepers, self-employed earners — had stable income but no access to formal credit. No salary slips, no credit history, no chance with traditional lenders. I designed the lending experience from discovery to disbursement.",
     problem:
@@ -214,7 +214,7 @@ export const projects: Project[] = [
   },
   {
     slug: "festive-one-time-investments",
-    bannerIndex: 7,
+    bannerImage: "/projects/banners/7.png",
     title: "Supercharge inflows with one-Time Investments",
     tag: "Bachatt · Revenue · Behavioural Design",
     description:
@@ -224,10 +224,10 @@ export const projects: Project[] = [
       { value: "₹3.12L", label: "peak daily inflow" },
       { value: "Cultural", label: "timing nudges" },
     ],
-    previewImage: "/problem_cards/preview/preview_7.png",
+    previewImage: "/projects/preview/preview_7.png",
     previewRadius: "32px",
     brand: "Bachatt",
-    accent: "#F97316",
+    accent: "#000000",
     context:
       "Bachatt's inflow was almost entirely SIP-driven. Surplus cash from festival bonuses, seasonal income, and business profits had no structured capture point. I designed the one-time investment experience around culturally-timed financial behaviour.",
     problem:
@@ -253,7 +253,7 @@ export const projects: Project[] = [
   },
   {
     slug: "merchant-delivery",
-    bannerIndex: 5,
+    bannerImage: "/projects/banners/5.png",
     title: "Merchant Delivery - E-Rickshaw Logistics",
     tag: "BatterSmart · Merchant · MVP Launch",
     description:
@@ -263,10 +263,10 @@ export const projects: Project[] = [
       { value: "12-week", label: "sprint cycle" },
       { value: "Non-tech", label: "user-first design" },
     ],
-    previewImage: "/problem_cards/preview/preview_5.png",
+    previewImage: "/projects/preview/preview_5.png",
     previewRadius: "32px",
     brand: "Battery Smart",
-    accent: "#22C55E",
+    accent: "#0ca378",
     context:
       "With 15M+ electric rickshaws on Indian roads — 83% of the three-wheeler market — Battery Smart saw an opportunity to build a structured delivery platform. I led design across the merchant app, supervised driver app and CMS design, and co-planned development across 6 sprints with a team of 3 PMs, 2 designers, and 8 developers.",
     problem:
@@ -296,7 +296,7 @@ export const projects: Project[] = [
   },
   {
     slug: "banking-medical-practitioners",
-    bannerIndex: 8,
+    bannerImage: "/projects/banners/8.png",
     title: "Banking\nfor Medical Practitioners",
     tag: "Cure · Healthtech x Fintech · Berlin",
     description:
@@ -306,10 +306,10 @@ export const projects: Project[] = [
       { value: "2FA", label: "security system" },
       { value: "AI", label: "practice metrics" },
     ],
-    previewImage: "/problem_cards/preview/preview_8.png",
+    previewImage: "/projects/preview/preview_8.png",
     previewRadius: "28px",
     brand: "Cure Finance",
-    accent: "#0EA5E9",
+    accent: "#04a1a1",
     context:
       "Cure Finance is a vertical neobank for doctors and dentists in Germany — one platform for practice finances, expense management, and tax forecasting. I worked in a globally distributed team of 4 designers, 18 developers, and 2 product owners. My role covered onboarding, the 2FA system, design system maintenance, and guiding other designers on the team.",
     problem:
@@ -339,7 +339,7 @@ export const projects: Project[] = [
   },
   {
     slug: "goal-based-investing",
-    bannerIndex: 9,
+    bannerImage: "/projects/banners/9.png",
     title: "Goal-Based Investing",
     tag: "Bachatt · Fintech · Behavioural Architecture",
     description:
@@ -349,7 +349,7 @@ export const projects: Project[] = [
       { value: "Smart SIP", label: "recommendation" },
       { value: "↑ Retention", label: "via milestones" },
     ],
-    previewImage: "/problem_cards/preview/preview_9.png",
+    previewImage: "/projects/preview/preview_9.png",
     previewRadius: "32px",
     brand: "Bachatt",
     accent: "#8B5CF6",
@@ -382,7 +382,7 @@ export const projects: Project[] = [
   },
   {
     slug: "jio-offer-store-revamp",
-    bannerIndex: 10,
+    bannerImage: "/projects/banners/10.png",
     title: "Jio Offer Store Revamp",
     tag: "Jio Engage · Jio Platforms · Design System Migration",
     description:
@@ -392,10 +392,10 @@ export const projects: Project[] = [
       { value: "12", label: "verticals rolled out" },
       { value: "Team", label: "training co-led" },
     ],
-    previewImage: "/problem_cards/preview/preview_10.png",
+    previewImage: "/projects/preview/preview_10.png",
     previewRadius: "32px",
     brand: "Jio Engage",
-    accent: "#7C3AED",
+    accent: "#a112b1",
     context:
       "Jio Engage is the gamification and digital marketing arm of Jio — India's largest telecom network with 560M+ subscribers. A new organisation-wide design system was introduced across all 12 product verticals. I picked up the offer store revamp and served as vice captain of a two-person squad responsible for training our 8-designer team on the new library.",
     problem:

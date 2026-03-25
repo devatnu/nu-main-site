@@ -7,85 +7,20 @@ import { useRef, useEffect, useState, useCallback } from "react";
 const Lottie = dynamic(() => import("lottie-react"), { ssr: false });
 import runningCharData from "../public/animation/running_character.json";
 
+import { homeProjects as projects, HomeProject as Project } from "@/lib/homeProjects";
+
 type PinState = "before" | "pinned" | "after";
 
 const CARD_W = 572;
 const GAP = 40;
 const STRIDE = CARD_W + GAP;
 
-interface Project {
-  title: string;
-  bg: string;
-  textColor: string;
-  btnBg: string;
-  imageSrc: string;
-  href: string;
-  layout: "title-top" | "image-top";
-}
-
-const projects: Project[] = [
-  {
-    title: "Enabling Mutual Funds for Underserved India",
-    bg: "#4755E3",
-    textColor: "#FFFFFF",
-    btnBg: "#3644D0",
-    imageSrc: "/projects/projects_home_preview/project-1.png",
-    href: "#",
-    layout: "title-top",
-  },
-  {
-    title: "Gold & Silver-\nPrecious Metals Investing",
-    bg: "#F0EEE9",
-    textColor: "#1E2029",
-    btnBg: "linear-gradient(-17deg, #1E2029 1%, #0A0C17 99%)",
-    imageSrc: "/projects/projects_home_preview/project-2.png",
-    href: "#",
-    layout: "image-top",
-  },
-  {
-    title: "Kuber- AI Enabled Wealth Experience",
-    bg: "#F0EEE9",
-    textColor: "#1E2029",
-    btnBg: "linear-gradient(-7deg, #1E2029 1%, #0A0C17 99%)",
-    imageSrc: "/projects/projects_home_preview/project-3.png",
-    href: "#",
-    layout: "image-top",
-  },
-  {
-    title: "Insta Loans -\nfor Underserved India",
-    bg: "#FFFFFF",
-    textColor: "#1E2029",
-    btnBg: "linear-gradient(-17deg, #1E2029 1%, #0A0C17 99%)",
-    imageSrc: "/projects/projects_home_preview/project-4.png",
-    href: "#",
-    layout: "title-top",
-  },
-  {
-    title: "Supercharge inflows with one-Time Investments",
-    bg: "#F0EEE9",
-    textColor: "#1E2029",
-    btnBg: "linear-gradient(-17deg, #1E2029 1%, #0A0C17 99%)",
-    imageSrc: "/projects/projects_home_preview/project-5.png",
-    href: "#",
-    layout: "image-top",
-  },
-  {
-    title: "Revamping India's biggest Jio Offer Store",
-    bg: "#F0EEE9",
-    textColor: "#1E2029",
-    btnBg: "linear-gradient(-7deg, #1E2029 1%, #0A0C17 99%)",
-    imageSrc: "/projects/projects_home_preview/project-6.png",
-    href: "#",
-    layout: "image-top",
-  },
-];
-
 function ProjectCard({ project }: { project: Project }) {
   const isLight = project.textColor === "#FFFFFF";
 
   return (
     <a
-      href={project.href}
+      href={`/design/${project.slug}`}
       className="flex flex-col gap-6 shrink-0 overflow-hidden no-underline"
       style={{
         width: `${CARD_W}px`,

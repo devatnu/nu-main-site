@@ -89,7 +89,7 @@ export default async function ProjectDetail({ params }: { params: Promise<{ slug
       {/* Banner image */}
       <div className="w-full relative" style={{ height: "512px", borderBottom: "2px solid var(--global-border)" }}>
         <Image
-          src={`/projects/banners/${project.bannerIndex}.png`}
+          src={project.bannerImage}
           alt={project.title}
           fill
           className="object-cover"
