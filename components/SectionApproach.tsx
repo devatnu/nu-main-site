@@ -86,7 +86,7 @@ export default function SectionApproach() {
   const trackX = `calc(50vw - ${BADGE / 2}px - ${active * SPACING}px)`;
 
   return (
-    <section className="pt-[200px]" style={{ background: "var(--base-100)" }}>
+    <section className="pt-[240px]" style={{ background: "var(--base-100)" }}>
       {/* Header */}
       <div className="flex flex-col items-center gap-10 px-10">
         <div
@@ -124,7 +124,7 @@ export default function SectionApproach() {
             flexDirection: "column",
             alignItems: "center",
             justifyContent: "flex-start",
-            paddingTop: "160px",
+            paddingTop: "240px",
             gap: "37px",
           }}
         >
@@ -182,7 +182,7 @@ export default function SectionApproach() {
 
           {/* Step content */}
           <div style={{ width: "712px" }}>
-            <div ref={contentRef} className="flex flex-col items-center gap-6">
+            <div ref={contentRef} className="flex flex-col items-center gap-12">
               <h3
                 className="heading-xl text-center w-full"
                 style={{ color: "var(--text-primary)" }}

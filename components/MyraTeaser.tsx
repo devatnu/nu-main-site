@@ -4,7 +4,7 @@ import Image from "next/image";
 
 export default function MyraTeaser() {
   return (
-    <section className="pt-[120px] pb-[48px] flex flex-col items-center relative px-10">
+    <section className="pt-[200px] pb-[48px] flex flex-col items-center relative px-10">
 
       {/* Rainbow blur glow behind card */}
       <div

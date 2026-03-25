@@ -130,7 +130,7 @@ export default function Footer() {
       {/* Bottom text — outside the card */}
       <div className="flex flex-col items-center gap-4 px-4">
         <p
-          className="display-l lg:display-2xl text-center"
+          className="display-2xl text-center"
           style={{ color: "#8E8F94" }}
         >
           Made with passion ❤️,<br />Guided by vision 🥽

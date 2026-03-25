@@ -13,7 +13,7 @@ export default function MobileGate() {
     return () => window.removeEventListener("resize", check);
   }, []);
 
-  if (!isMobile) return null;
+  if (!isMobile || true) return null; // hidden for now
 
   return (
     <div

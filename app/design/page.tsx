@@ -267,7 +267,7 @@ function StackedWideCard({
         className="pointer-events-none select-none absolute"
         style={{ right: "-60px", top: "-80px", width: "280px", height: "280px", transform: "rotate(22.85deg)" }}
       >
-        <Image src="/problem_cards/preview/coin_top_right.png" alt="" fill className="object-contain" sizes="280px" />
+        <Image src="/projects/preview/coin_top_right.png" alt="" fill className="object-contain" sizes="280px" />
       </div>
 
       {/* Coin — left center */}
@@ -275,7 +275,7 @@ function StackedWideCard({
         className="pointer-events-none select-none absolute"
         style={{ left: "-80px", top: "160px", width: "200px", height: "200px", transform: "rotate(-23.99deg)" }}
       >
-        <Image src="/problem_cards/preview/coin_second.png" alt="" fill className="object-contain" sizes="200px" />
+        <Image src="/projects/preview/coin_second.png" alt="" fill className="object-contain" sizes="200px" />
       </div>
 
       {/* Text — centered */}

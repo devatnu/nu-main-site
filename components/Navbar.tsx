@@ -132,13 +132,11 @@ export default function Navbar() {
         </div>
       )}
 
-      {/* Mobile menu overlay — sits below navbar (z-[48] < navbar z-50) */}
+      {/* Mobile menu overlay — z-[51] above hero z-50, navbar at z-[52] stays on top */}
       <div
-        className="fixed inset-0 z-[48] flex flex-col lg:hidden"
+        className="fixed inset-0 z-[99] flex flex-col lg:hidden"
         style={{
-          background: "rgba(240,238,233,0.97)",
-          backdropFilter: "blur(20px)",
-          WebkitBackdropFilter: "blur(20px)",
+          background: "var(--base-100)",
           transform: menuOpen ? "translateY(0)" : "translateY(-100%)",
           transition: "transform 0.28s cubic-bezier(0.4, 0, 0.2, 1)",
           paddingTop: "88px",
@@ -180,7 +178,7 @@ export default function Navbar() {
 
       {/* Main navbar */}
       <nav
-        className="fixed left-0 right-0 z-50 flex items-center gap-2 px-4 lg:px-10 pt-6 lg:pt-10 pb-4 transition-all duration-300"
+        className="fixed left-0 right-0 z-[100] flex items-center gap-2 px-4 lg:px-10 pt-6 lg:pt-10 pb-4 transition-all duration-300"
         style={{
           top: 0,
           transform: visible ? "translateY(0)" : "translateY(-120%)",
@@ -191,7 +189,7 @@ export default function Navbar() {
         }}
       >
         {/* Left: Logo + desktop nav pill + Ask Myra */}
-        <div className="flex flex-1 items-start h-12 gap-3 lg:gap-8 min-w-0">
+        <div className="flex flex-1 items-center h-12 gap-3 lg:gap-8 min-w-0">
           {/* Logo */}
           <Link href="/" className="relative shrink-0 size-12 transition-opacity duration-150 hover:opacity-80">
             <Image src="/nav/logo.png" alt="Logo" width={48} height={48} priority style={{ display: "block", objectFit: "contain" }} />
@@ -214,10 +212,10 @@ export default function Navbar() {
             ))}
           </div>
 
-          {/* Ask Myra — icon only on mobile, full on desktop */}
+          {/* Ask Myra — icon only on mobile, full button on desktop */}
           <button
             onClick={() => window.dispatchEvent(new CustomEvent("open-myra"))}
-            className="flex items-center gap-2 label-m italic text-white rounded-xl border shimmer-ai-btn shrink-0 transition-all duration-300 px-2 lg:px-5"
+            className="hidden lg:flex items-center gap-2 label-m italic text-white rounded-xl border shimmer-ai-btn shrink-0 transition-all duration-300 px-5"
             style={{
               background: "linear-gradient(-17deg, #1E2029 1%, #0A0C17 99%)",
               borderColor: "rgba(255,255,255,0.3)",
@@ -232,7 +230,25 @@ export default function Navbar() {
             <div className="relative w-8 h-8 rounded-full shrink-0" style={{ boxShadow: "0 0 12px rgba(71,85,227,0.6)" }}>
               <Image src="/section-myra/myra_static.png" alt="Myra" fill className="object-cover rounded-full" />
             </div>
-            <span className="hidden lg:inline">Ask Myra</span>
+            Ask Myra
+          </button>
+          {/* Mobile: bare icon only */}
+          <button
+            onClick={() => window.dispatchEvent(new CustomEvent("open-myra"))}
+            className="lg:hidden shrink-0 transition-all duration-300"
+            style={{
+              opacity: heroVisible ? 0 : 1,
+              pointerEvents: heroVisible ? "none" : "all",
+              transform: heroVisible ? "scale(0.92)" : "scale(1)",
+              background: "none",
+              border: "none",
+              padding: 0,
+            }}
+            aria-label="Ask Myra"
+          >
+            <div className="relative w-9 h-9 rounded-full">
+              <Image src="/section-myra/myra_static.png" alt="Myra" fill className="object-contain" />
+            </div>
           </button>
         </div>
 
@@ -293,7 +309,7 @@ export default function Navbar() {
         </div>
 
         {/* Right: Desktop social/music | Mobile hamburger */}
-        <div className="flex flex-1 items-start justify-end gap-4 lg:gap-8">
+        <div className="flex flex-1 items-center justify-end gap-4 lg:gap-8">
           {/* Desktop quick links */}
           <div className="hidden lg:flex items-center gap-4 shrink-0">
             <a href="https://wa.me/+917508631919" target="_blank" rel="noopener noreferrer" className="shrink-0 transition-opacity duration-150 hover:opacity-80">
