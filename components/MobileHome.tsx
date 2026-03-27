@@ -237,9 +237,9 @@ export default function MobileHome() {
           style={{
             background: "linear-gradient(-17deg, #1E2029 1%, #0A0C17 99%)",
             border: "1.6px solid rgba(255,255,255,0.25)",
-            borderRadius: "16px",
+            borderRadius: "12px",
             boxShadow: "0 4px 32px rgba(71,85,227,0.4)",
-            padding: "12px 32px",
+            padding: "8px 24px",
           }}
         >
           Ask Myra
