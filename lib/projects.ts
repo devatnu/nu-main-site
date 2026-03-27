@@ -1,3 +1,43 @@
+export interface KeyDesignDecision {
+  title: string;
+  situation: string;
+  optionA: string;
+  optionB: string;
+  chosen: string;
+  visual?: string;
+}
+
+export interface PushbackItem {
+  title: string;
+  what: string;
+  navigation: string;
+  result: string;
+}
+
+export interface WorkScreen {
+  caption: string;
+  imageSrc?: string;
+}
+
+export interface ImpactAdaptation {
+  launchMetrics: string[];
+  observed: string;
+  adapted: string;
+  finalMetrics: string[];
+}
+
+export interface ExpandedSections {
+  why?: string;
+  keyDesignDecisions?: KeyDesignDecision[];
+  theWork?: WorkScreen[];
+  pushback?: PushbackItem[];
+  impactAdaptation?: ImpactAdaptation;
+  outcomeReflection?: {
+    learned: string;
+    differently: string;
+  };
+}
+
 export interface Project {
   slug: string;
   title: string;
@@ -14,6 +54,7 @@ export interface Project {
   approach: { heading: string; body: string }[];
   impact: string;
   keyInsight: string;
+  expandedSections?: ExpandedSections;
 }
 
 export const projects: Project[] = [
@@ -94,6 +135,72 @@ export const projects: Project[] = [
       "12% of active investors adopted daily/weekly SIP behaviour. Created a new cohort of high-frequency investors that didn't exist before. Daily SIP became the default entry point for first-time investors on the platform.",
     keyInsight:
       "For underserved investors, the biggest barrier isn't access to investment products — it's how those products are structured. By aligning investing with real-life savings behaviour, Bachatt made mutual fund investing accessible to everyday earners.",
+    expandedSections: {
+      why: "[Placeholder — Why did you take this project on? What drew you to this problem? What was the broader context that made this feel urgent or meaningful to work on? 2–3 sentences.]",
+      keyDesignDecisions: [
+        {
+          title: "[Placeholder — Decision 1 title, e.g. 'Daily habit over monthly commitment']",
+          situation: "[Placeholder — One line describing the core design challenge for this decision.]",
+          optionA: "[Placeholder — Option A: describe the first direction considered.]",
+          optionB: "[Placeholder — Option B: describe the alternative direction.]",
+          chosen: "[Placeholder — Which option you chose and the reasoning behind it. 2–3 sentences.]",
+          visual: "[Placeholder — Describe the visual to include here: before/after, annotated screen, or flow comparison.]",
+        },
+        {
+          title: "[Placeholder — Decision 2 title]",
+          situation: "[Placeholder — One line describing the design challenge.]",
+          optionA: "[Placeholder — Option A.]",
+          optionB: "[Placeholder — Option B.]",
+          chosen: "[Placeholder — What you chose and why.]",
+          visual: "[Placeholder — Visual description.]",
+        },
+        {
+          title: "[Placeholder — Decision 3 title (optional)]",
+          situation: "[Placeholder — One line describing the design challenge.]",
+          optionA: "[Placeholder — Option A.]",
+          optionB: "[Placeholder — Option B.]",
+          chosen: "[Placeholder — What you chose and why.]",
+        },
+      ],
+      theWork: [
+        { caption: "[Placeholder — Screen 1: describe what this screen shows and why it matters.]" },
+        { caption: "[Placeholder — Screen 2: describe what this screen shows and why it matters.]" },
+        { caption: "[Placeholder — Screen 3: describe what this screen shows and why it matters.]" },
+        { caption: "[Placeholder — Screen 4: describe what this screen shows and why it matters.]" },
+        { caption: "[Placeholder — Screen 5: describe what this screen shows and why it matters.]" },
+      ],
+      pushback: [
+        {
+          title: "[Placeholder — Pushback 1 title, e.g. 'Product said daily SIPs were too risky to launch']",
+          what: "[Placeholder — Who pushed back and what their concern was. 2–3 sentences.]",
+          navigation: "[Placeholder — How you navigated it: what you proposed, negotiated, or compromised on. 2–3 sentences.]",
+          result: "[Placeholder — What shipped and whether it worked. 1–2 sentences.]",
+        },
+        {
+          title: "[Placeholder — Pushback 2 title (optional)]",
+          what: "[Placeholder — Who pushed back and what their concern was.]",
+          navigation: "[Placeholder — How you navigated it.]",
+          result: "[Placeholder — What shipped.]",
+        },
+      ],
+      impactAdaptation: {
+        launchMetrics: [
+          "[Placeholder — Launch metric 1, e.g. 'Day-1 activation rate: X%']",
+          "[Placeholder — Launch metric 2]",
+          "[Placeholder — Launch metric 3]",
+        ],
+        observed: "[Placeholder — What did the data tell you after launch? What surprised you? Where did users behave differently than expected? 2–3 sentences.]",
+        adapted: "[Placeholder — What design changes did you make based on the data? Be specific — 'changed X to Y, metric moved from A to B'. 2–3 sentences.]",
+        finalMetrics: [
+          "[Placeholder — Final metric 1, e.g. 'Conversion stabilised at X% after simplifying plan selection']",
+          "[Placeholder — Final metric 2]",
+        ],
+      },
+      outcomeReflection: {
+        learned: "[Placeholder — What this project taught you. One honest paragraph — not what went well, but what you learned. Could be about the problem space, working with constraints, or your own growth as a designer. 3–5 sentences.]",
+        differently: "[Placeholder — One specific thing you'd do differently. Not vague 'more research' — a concrete change with reasoning. 2–3 sentences.]",
+      },
+    },
   },
   {
     slug: "milestones-rewards",

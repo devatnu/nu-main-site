@@ -43,7 +43,7 @@ export default function RootLayout({
         <MobileGate />
         <PageLoader />
         <MyraChat />
-        <Navbar />
+        <div className="hidden sm:block"><Navbar /></div>
         {children}
       </body>
     </html>

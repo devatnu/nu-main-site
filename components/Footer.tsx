@@ -83,7 +83,7 @@ export default function Footer() {
           style={{ padding: "48px 16px" }}
         >
           <a
-            href="https://drive.google.com/uc?export=download&id=1CtaL9u0L-xnbJL1VNnM5tLVK95e8GIrO"
+            href="/Nishant_Upadhyay_Resume.pdf"
             target="_blank"
             rel="noopener noreferrer"
             className="body-l italic text-white underline underline-offset-4 transition-opacity duration-150 hover:opacity-70 text-center"

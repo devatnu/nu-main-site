@@ -9,7 +9,6 @@ import runningCharData from "../public/animation/running_character.json";
 
 import { homeProjects as projects, HomeProject as Project } from "@/lib/homeProjects";
 
-type PinState = "before" | "pinned" | "after";
 
 const CARD_W = 572;
 const GAP = 40;
@@ -118,39 +117,56 @@ function ProjectCard({ project }: { project: Project }) {
   );
 }
 
-const SCALE_VHS = 2; // extra vh after horizontal scroll ends, used for lottie scale
+const ZOOM_VHS = 1;  // vh of scroll dedicated to the 0.8→1.0 zoom
+const SCALE_VHS = 2; // vh after horizontal scroll ends, used for lottie scale
+
+type PinState = "before" | "pinned" | "after";
 
 export default function SectionProjectsList() {
   const wrapperRef = useRef<HTMLDivElement>(null);
   const [pin, setPin] = useState<PinState>("before");
   const [progress, setProgress] = useState(0);
   const [lottieScale, setLottieScale] = useState(1);
+  const [entryScale, setEntryScale] = useState(0.8);
 
   const onScroll = useCallback(() => {
     const el = wrapperRef.current;
     if (!el) return;
     const scrolled = -el.getBoundingClientRect().top;
     const vh = window.innerHeight;
-    const horizEnd = projects.length * vh;
+    const zoomEnd  = ZOOM_VHS * vh;
+    const horizEnd = zoomEnd + projects.length * vh;
     const scaleEnd = horizEnd + SCALE_VHS * vh;
 
     if (scrolled < 0) {
+      // not yet pinned — hold at 0.8
+      setEntryScale(0.8);
       setPin("before");
       setProgress(0);
       setLottieScale(1);
+    } else if (scrolled < zoomEnd) {
+      // zoom phase: scale 0.8 → 1.0, cards stay put
+      const t = scrolled / zoomEnd;
+      setEntryScale(0.8 + 0.2 * t);
+      setPin("pinned");
+      setProgress(0);
+      setLottieScale(1);
     } else if (scrolled >= scaleEnd) {
+      setEntryScale(1);
       setPin("after");
       setProgress(1);
       setLottieScale(3);
     } else if (scrolled >= horizEnd) {
-      // horizontal scroll done — keep pinned, grow lottie
+      setEntryScale(1);
       setPin("pinned");
       setProgress(1);
       const scaleProgress = (scrolled - horizEnd) / (SCALE_VHS * vh);
       setLottieScale(1 + scaleProgress * 2);
     } else {
+      // horizontal scroll phase
+      setEntryScale(1);
       setPin("pinned");
-      setProgress(scrolled / horizEnd);
+      setProgress((scrolled - zoomEnd) / (projects.length * vh));
       setLottieScale(1);
     }
   }, []);
@@ -171,54 +187,54 @@ export default function SectionProjectsList() {
   const translateX = -progress * projects.length * STRIDE;
 
   return (
-    <section className="pt-[160px]" style={{ background: "var(--base-100)" }}>
-      {/* Scroll driver — drives horizontal card slide + lottie scale */}
+    <section style={{ background: "var(--base-100)" }}>
+
+      {/* ── Section header — scrolls away before pin kicks in ── */}
+      <div className="flex flex-col items-center gap-10 px-10 pt-[160px] pb-[120px]">
+        <div className="flex items-center gap-2">
+          <span
+            className="font-display font-medium"
+            style={{ fontSize: "24px", lineHeight: "28px", color: "var(--text-primary)" }}
+          >
+            Recent Builds
+          </span>
+          <div
+            style={{ width: "8px", height: "8px", borderRadius: "50%", background: "#4755E3", flexShrink: 0 }}
+          />
+          <span
+            className="font-display font-medium"
+            style={{ fontSize: "24px", lineHeight: "28px", color: "var(--text-secondary)" }}
+          >
+            Making Impact
+          </span>
+        </div>
+        <h2
+          className="display-2xl text-center"
+          style={{
+            background: "linear-gradient(-5deg, #0D0F1A 1%, #4755E3 99%)",
+            WebkitBackgroundClip: "text",
+            WebkitTextFillColor: "transparent",
+            backgroundClip: "text",
+          }}
+        >
+          From insight to execution<br />Delivering measurable value for customers
+        </h2>
+      </div>
+
+      {/* ── Scroll driver — cards only ── */}
       <div
         ref={wrapperRef}
-        style={{ position: "relative", height: `${(projects.length + 1 + SCALE_VHS) * 100}vh` }}
+        style={{ position: "relative", height: `${(ZOOM_VHS + projects.length + 1 + SCALE_VHS) * 100}vh` }}
       >
         <div
           style={{
             ...panelStyle,
             background: "var(--base-100)",
             display: "flex",
-            flexDirection: "column",
+            alignItems: "center",
             justifyContent: "center",
-            gap: "120px",
           }}
         >
-          {/* Section header — inside sticky panel */}
-          <div className="flex flex-col items-center gap-10 px-10">
-            <div className="flex items-center gap-2">
-              <span
-                className="font-display font-medium"
-                style={{ fontSize: "24px", lineHeight: "28px", color: "var(--text-primary)" }}
-              >
-                Recent Builds
-              </span>
-              <div
-                style={{ width: "8px", height: "8px", borderRadius: "50%", background: "#4755E3", flexShrink: 0 }}
-              />
-              <span
-                className="font-display font-medium"
-                style={{ fontSize: "24px", lineHeight: "28px", color: "var(--text-secondary)" }}
-              >
-                Making Impact
-              </span>
-            </div>
-            <h2
-              className="display-2xl text-center"
-              style={{
-                background: "linear-gradient(-5deg, #0D0F1A 1%, #4755E3 99%)",
-                WebkitBackgroundClip: "text",
-                WebkitTextFillColor: "transparent",
-                backgroundClip: "text",
-              }}
-            >
-              From insight to execution<br />Delivering measurable value for customers
-            </h2>
-          </div>
-
           {/* Padded overflow-hidden track container */}
           <div
             style={{
@@ -232,7 +248,8 @@ export default function SectionProjectsList() {
               style={{
                 display: "flex",
                 gap: `${GAP}px`,
-                transform: `translateX(${translateX}px)`,
+                transform: `translateX(${translateX}px) scale(${entryScale})`,
+                transformOrigin: "left center",
                 willChange: "transform",
               }}
             >

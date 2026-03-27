@@ -11,31 +11,40 @@ import MyraTeaser from "@/components/MyraTeaser";
 import VisionTeaser from "@/components/VisionTeaser";
 import QuoteTeaser from "@/components/QuoteTeaser";
 import Footer from "@/components/Footer";
+import MobileHome from "@/components/MobileHome";
 
 export default function Home() {
   return (
-    <main className="relative overflow-x-hidden">
-      {/* Background graphics — fixed, behind everything, not clipped vertically */}
-      <div className="hidden sm:block absolute pointer-events-none select-none z-0"
-        style={{ left: "-876px", top: "-180px", width: "1152px", height: "1152px" }}>
-        <Image src="/hero/Graphic Top Left.png" alt="" fill className="object-contain" priority />
+    <>
+      {/* Mobile page — shown only on small screens */}
+      <div className="sm:hidden">
+        <MobileHome />
       </div>
-      <div className="hidden sm:block absolute pointer-events-none select-none z-0"
-        style={{ right: "-876px", top: "-180px", width: "1152px", height: "1152px" }}>
-        <Image src="/hero/Graphic Top Right.png" alt="" fill className="object-contain" priority />
-      </div>
-      <Hero />
-      <ToolsStrip />
-      <Traits />
-      <ImpactNumbers />
-      <Brands />
-      <BrandLogos />
-      <SectionApproach />
-      <SectionProjectsList />
-      <MyraTeaser />
-      <VisionTeaser />
-      <QuoteTeaser />
-      <Footer />
-    </main>
+
+      {/* Desktop page — hidden on small screens */}
+      <main className="hidden sm:block relative overflow-x-hidden">
+        {/* Background graphics */}
+        <div className="absolute pointer-events-none select-none z-0"
+          style={{ left: "-876px", top: "-180px", width: "1152px", height: "1152px" }}>
+          <Image src="/hero/Graphic Top Left.png" alt="" fill className="object-contain" priority />
+        </div>
+        <div className="absolute pointer-events-none select-none z-0"
+          style={{ right: "-876px", top: "-180px", width: "1152px", height: "1152px" }}>
+          <Image src="/hero/Graphic Top Right.png" alt="" fill className="object-contain" priority />
+        </div>
+        <Hero />
+        <ToolsStrip />
+        <Traits />
+        <ImpactNumbers />
+        <Brands />
+        <BrandLogos />
+        <SectionApproach />
+        <SectionProjectsList />
+        <MyraTeaser />
+        <VisionTeaser />
+        <QuoteTeaser />
+        <Footer />
+      </main>
+    </>
   );
 }

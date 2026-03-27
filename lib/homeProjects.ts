@@ -1,6 +1,7 @@
 export interface HomeProject {
   slug: string;
   title: string;
+  category: string;
   bg: string;
   textColor: string;
   btnBg: string;
@@ -12,6 +13,7 @@ export const homeProjects: HomeProject[] = [
   {
     slug: "enabling-mf-underserved-india",
     title: "Enabling Mutual Funds for Underserved India",
+    category: "Bachatt · Fintech",
     bg: "#4755E3",
     textColor: "#FFFFFF",
     btnBg: "#4755E3",
@@ -21,6 +23,7 @@ export const homeProjects: HomeProject[] = [
   {
     slug: "gold-and-silver",
     title: "Gold & Silver-\nPrecious Metals Investing",
+    category: "Bachatt · Fintech",
     bg: "#E5E2DB",
     textColor: "#1E2029",
     btnBg: "linear-gradient(-17deg, #1E2029 1%, #0A0C17 99%)",
@@ -30,6 +33,7 @@ export const homeProjects: HomeProject[] = [
   {
     slug: "kuber",
     title: "Kuber- AI Enabled Wealth Experience",
+    category: "Wealth · Fintech",
     bg: "#F0EEE9",
     textColor: "#1E2029",
     btnBg: "linear-gradient(-7deg, #1E2029 1%, #0A0C17 99%)",
@@ -39,6 +43,7 @@ export const homeProjects: HomeProject[] = [
   {
     slug: "loans-underserved-india",
     title: "Insta Loans -\nfor Underserved India",
+    category: "Lending · Fintech",
     bg: "#FFFFFF",
     textColor: "#1E2029",
     btnBg: "linear-gradient(-17deg, #1E2029 1%, #0A0C17 99%)",
@@ -48,6 +53,7 @@ export const homeProjects: HomeProject[] = [
   {
     slug: "festive-one-time-investments",
     title: "Supercharge inflows with one-Time Investments",
+    category: "Savings · Fintech",
     bg: "#E5E2DB",
     textColor: "#1E2029",
     btnBg: "linear-gradient(-17deg, #1E2029 1%, #0A0C17 99%)",
@@ -57,6 +63,7 @@ export const homeProjects: HomeProject[] = [
   {
     slug: "jio-offer-store-revamp",
     title: "Revamping India's biggest Jio Offer Store",
+    category: "Telecom · Engagement",
     bg: "#F0EEE9",
     textColor: "#1E2029",
     btnBg: "linear-gradient(-7deg, #1E2029 1%, #0A0C17 99%)",

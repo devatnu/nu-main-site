@@ -265,7 +265,7 @@ function ResumeBubble({ text }: { text: string }) {
   return (
     <>
       <Bubble><p style={{ margin: 0 }}>{text}</p></Bubble>
-      <CTAButton label="Download resume" href="https://drive.google.com/file/d/1CtaL9u0L-xnbJL1VNnM5tLVK95e8GIrO/view?usp=sharing" icon="download" />
+      <CTAButton label="Download resume" href="/Nishant_Upadhyay_Resume.pdf" icon="download" />
     </>
   );
 }
