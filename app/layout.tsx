@@ -4,7 +4,7 @@ import "./globals.css";
 import Navbar from "@/components/Navbar";
 import PageLoader from "@/components/PageLoader";
 import MyraChat from "@/components/MyraChat";
-import MobileGate from "@/components/MobileGate";
+import DesktopOnly from "@/components/DesktopOnly";
 
 const bricolage = Bricolage_Grotesque({
   variable: "--font-display",
@@ -40,10 +40,9 @@ export default function RootLayout({
   return (
     <html lang="en" className={`${bricolage.variable} ${beVietnamPro.variable} ${caveat.variable}`}>
       <body className="antialiased">
-        <MobileGate />
-        <PageLoader />
+<PageLoader />
         <MyraChat />
-        <div className="hidden sm:block"><Navbar /></div>
+        <DesktopOnly><Navbar /></DesktopOnly>
         {children}
       </body>
     </html>

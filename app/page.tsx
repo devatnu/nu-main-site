@@ -38,7 +38,7 @@ export default function Home() {
         <ImpactNumbers />
         <Brands />
         <BrandLogos />
-        <SectionApproach />
+        {/* <SectionApproach /> */}
         <SectionProjectsList />
         <MyraTeaser />
         <VisionTeaser />
